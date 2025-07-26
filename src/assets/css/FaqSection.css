@@ -1,0 +1,66 @@
+.faq-section {
+  padding-top: 50px;
+
+    padding-bottom: 150px;
+}
+
+.custom-item {
+  border: none;
+  border-radius: 12px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.custom-btn {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  font-weight: 500;
+  color: #1b1b1b;
+  font-size: 1.3rem;
+  border: none;
+      box-shadow: none;
+  transition: background 0.3s ease;
+}
+
+.custom-btn:not(.collapsed) {
+  background-color: #f5f9ff;
+  color: #0d3f7a;
+}
+
+.icon-box {
+  background-color: #F4F4F4;
+  color: white;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+}
+
+/* ✅ Remove blue border / background / box-shadow on focus */
+.accordion-button:focus {
+  box-shadow: none !important;
+  outline: none !important;
+  background-color: #ffffff !important; /* ya jo bhi normal background ho */
+  color: inherit !important;
+}
+
+.accordion-button:not(.collapsed):focus {
+  background-color: #f5f9ff !important; /* ya jo bhi normal hover wala color ho */
+  color: #0d3f7a;
+}
+
+.accordion-body {
+  background-color: #ffffff;
+  padding: 1.2rem 2rem;
+  color: #333;
+  font-size: 0.95rem;
+  border-top: 1px solid #eee;
+}
+
+.custom-btn{
+    border-radius: 0%;
+}
