@@ -91,8 +91,8 @@ const Navbar = () => {
       }}
     >
       <nav className="navbar navbar-expand-lg px-0" ref={navRef}>
-        <div className="container-fluid" style={{ padding: "0 8px" }}>
-          <div className="d-flex justify-content-between align-items-center w-100" style={{ minHeight: "40px" }}>
+        <div className="container-fluid" style={{ padding: "0 8px" , width: "95%",margin: "0 auto" }}>
+          <div className="d-flex justify-content-between align-items-center w-100" style={{ minHeight: "40px"}}>
             {/* Logo */}
             <Link 
               to="/" 
