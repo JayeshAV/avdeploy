@@ -10,6 +10,15 @@
     --bs-body-font-family: 'Arimo';
     --title-fonts: 'Bricolage Grotesque';
 }
+/* Add to your global CSS (style.css or index.css) */
+body {
+  overflow-x: hidden;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+}
 
 h1, .h1, h2, .h2 {
     line-height: 1;

@@ -250,10 +250,10 @@ const Footer = () => {
             </Col>
 
             {/* Column 3 – Get in Touch */}
-            <Col xs={12} md={6} lg={3}>
+            <Col xs={12} md={6} lg={3} >
               <h5 className="fw-bold mb-3">Get in Touch</h5>
-              <p className="mb-1">
-                <a href="mailto:avataratechnobiz@gmail.com" style={{ textDecoration: 'none', color: '#6c757d' }}>
+              <p className="mb-1" >
+                <a href="mailto:avataratechnobiz@gmail.com" style={{ textDecoration: 'none', color: '#6c757d',fontSize: '16px' }}>
                   📧 avataratechnobiz@gmail.com
                 </a>
               </p>
