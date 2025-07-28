@@ -196,9 +196,9 @@ const Navbar = () => {
                   <ul
                     className={`dropdown-menu bg-dark border-0 ${companyDropdownOpen ? "show" : ""}`}
                     style={{ 
-                      minWidth: "150px", 
+                      minWidth: "120px", 
                       boxShadow: "0 4px 6px rgba(0, 0, 0, 0.3)", 
-                      marginTop: "13px" 
+                      marginTop: "0px" 
                     }}
                   >
                     <li>
