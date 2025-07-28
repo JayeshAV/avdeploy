@@ -109,7 +109,7 @@ const Navbar = () => {
                 className="d-inline-block"
               />
               <span
-                className="ms-2 fw-bold text-white d-none d-sm-inline"
+                className="ms-2 fw-bold text-white"
                 style={{
                   fontSize: "clamp(14px, 2.5vw, 20px)",
                   whiteSpace: "nowrap"
@@ -117,12 +117,12 @@ const Navbar = () => {
               >
                 Avatara Technobiz
               </span>
-              <span
+              {/* <span
                 className="ms-2 fw-bold text-white d-inline d-sm-none"
                 style={{ fontSize: "14px" }}
               >
                 Avatara
-              </span>
+              </span> */}
             </Link>
 
             {/* Hamburger Toggle */}
@@ -261,7 +261,6 @@ const Navbar = () => {
               backgroundColor: "rgba(0, 0, 0, 0.95)",
               backdropFilter: "blur(10px)",
               WebkitBackdropFilter: "blur(10px)",
-              borderTop: "1px solid rgba(255, 255, 255, 0.1)",
               maxHeight: mobileMenuOpen ? "90vh" : "0", // ✅ use viewport height
               overflowY: "auto",                        // ✅ allow scroll if overflow
               transition: "all 0.3s ease"
