@@ -21,7 +21,6 @@ const BlogDetails1 = () => {
         backgroundRepeat: 'no-repeat'
       };
     
-   
       const blogData = [
         {
           id: 1,
@@ -50,8 +49,7 @@ const BlogDetails1 = () => {
             title: 'Top Web Development Trends to Watch for in 2025',
             desc: 'In today\'s fast-paced digital world, technology is no longer a luxury reserved for large corporations...',
             link: '/blog-details-3'
-          },
-        // Repeat or add more as needed
+          }
       ];
   return (
    <>
@@ -108,7 +106,6 @@ const BlogDetails1 = () => {
                     <p>Retailers using automated inventory systems can reduce stockouts by 65% while cutting carrying costs by 30% (Gartner, 2024). AI-powered CRM systems now predict customer needs with 89% accuracy.</p>
                 </div>
 
-                {/* Tool showcase with hover effects */}
                 <div class="tools-showcase mt-4">
                     <h6>Recommended 2025 Tools:</h6>
                     <div class="d-flex flex-wrap gap-2">

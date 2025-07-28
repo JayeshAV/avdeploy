@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Portfolio from '../Components/PortfolioSection';
-
 import headerbg from "../assets/images/header-bg.jpg";
 import aboutImg from '../assets/images/img-about.svg';
 import iconBrain from '../assets/images/icon-96--brain.svg';
@@ -15,7 +14,6 @@ import Testimonials from '../Components/Testimonials';
 import BlogSlider from '../Components/Blogslider';
 import TechSection from '../Components/TechSection';
 
-// Animation Variants
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
@@ -41,31 +39,31 @@ const About = () => {
 
   const values = [
   {
-    icon: "💡", // Innovation
+    icon: "💡", 
     color: "#ff6f00",
     title: "Innovation",
     desc: "We embrace the latest technologies and continuously evolve to provide forward-thinking solutions that drive business success."
   },
   {
-    icon: "🤝", // Integrity
+    icon: "🤝", 
     color: "#00796b",
     title: "Integrity",
     desc: "Trust is the foundation of our business. We are transparent, ethical, and accountable in everything we do."
   },
   {
-    icon: "🎯", // Customer-Centric
+    icon: "🎯", 
     color: "#512da8",
     title: "Customer-Centric Approach",
     desc: "Our clients are at the heart of our operations. We prioritize their needs, ensuring tailored solutions and exceptional service."
   },
   {
-    icon: "🏆", // Excellence
+    icon: "🏆", 
     color: "#d32f2f",
     title: "Excellence",
     desc: "We strive for the highest quality in our services, products, and customer experience, exceeding expectations at every step."
   },
   {
-    icon: "🤝", // Collaboration
+    icon: "🤝",
     color: "#1976d2",
     title: "Collaboration & Teamwork",
     desc: "Great solutions come from great teamwork. We work closely with our clients and partners to create seamless IT experiences."
@@ -75,7 +73,7 @@ const About = () => {
 
   return (
     <>
-      {/* Hero Section */}
+     
       <motion.section
         className="section-hero"
         style={sectionStyle}
@@ -95,7 +93,6 @@ const About = () => {
         </div>
       </motion.section>
 
-      {/* About Section */}
       <motion.section
         className="section section-home"
         variants={fadeUp}
@@ -129,7 +126,6 @@ const About = () => {
         </div>
       </motion.section>
 
-      {/* Mission & Values Section */}
       <motion.section
         className="section section-home bg-gray"
         variants={fadeUp}

@@ -14,8 +14,6 @@ const Footer = () => {
     backgroundColor: "#f8f9fa",
   };
 
-
-  // Increased font sizes
   const textStyle = { fontSize: "16px", color: "#6c757d", lineHeight: "1.6", fontFamily: 'Bricolage Grotesque', textDecoration: "none" };
   const headingStyle = { color: "black", fontWeight: 600, fontSize: "18px", fontFamily: 'Bricolage Grotesque' };
 
@@ -160,10 +158,6 @@ const Footer = () => {
     //       </motion.footer>
     //       </div>
     //     </motion.footer>
-
-
-
-
     <motion.footer
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -196,7 +190,6 @@ const Footer = () => {
       </div>
       < footer className="footer bg-light pt-5">
         <Container>
-          {/* 🔶 Row 1: Logo + Name (Centered) */}
           <Row className="justify-content-start mb-4">
             <Col xs="auto" className="d-flex align-items-center gap-2">
               <img
@@ -208,7 +201,6 @@ const Footer = () => {
             </Col>
           </Row>
 
-          {/* 🔷 Row 2: 4 Columns in One Row */}
           <Row className="gy-4 text-start">
             {/* Column 1 – Locations */}
             <Col xs={12} md={6} lg={3}>
@@ -237,7 +229,6 @@ const Footer = () => {
               </p>
             </Col>
 
-            {/* Column 2 – Services */}
             <Col xs={12} md={6} lg={3}>
               <h5 className="fw-bold mb-3">Services</h5>
               <ul className="list-unstyled text-muted mb-0">
@@ -249,7 +240,6 @@ const Footer = () => {
               </ul>
             </Col>
 
-            {/* Column 3 – Get in Touch */}
             <Col xs={12} md={6} lg={3} >
               <h5 className="fw-bold mb-3">Get in Touch</h5>
               <p className="mb-1" >
@@ -275,7 +265,6 @@ const Footer = () => {
               </div>
             </Col>
 
-            {/* Column 4 – Quick Links */}
             <Col xs={12} md={6} lg={3}>
               <h5 className="fw-bold mb-3">Quick Links</h5>
               <ul className="list-unstyled d-flex flex-column gap-2">
@@ -295,7 +284,6 @@ const Footer = () => {
             </Col>
           </Row>
 
-          {/* 🔚 Copyright */}
           <div className="text-center py-4 border-top mt-4">
             <p className="mb-0">
               © 2025 <Link to="/" className="text-decoration-none">Avatara Technobiz</Link>. All rights reserved.

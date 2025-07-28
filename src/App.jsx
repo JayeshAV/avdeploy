@@ -27,14 +27,12 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time of 2 seconds
     const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <>
-     
         <>
         <ErrorBoundary >
           <ScrollToTop />
@@ -56,7 +54,6 @@ function App() {
             <Route path='/portfolio-details-4' element={<Footmetrics />} />
             <Route path='/career' element={<Career />} />
             <Route path='/faq' element={<Faq />} />
-
           </Routes>
           <Footer />
           </ErrorBoundary>

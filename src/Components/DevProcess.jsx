@@ -4,12 +4,7 @@ import '../assets/css/DevProcess.css'; // ✅ Custom CSS file
 // DevProcess.jsx
 import { Link } from 'react-router-dom';
 
-
-
-
-
 const DevProcess = () => {
-
 
   useEffect(() => {
     const boxes = document.querySelectorAll('.timeline-box');
@@ -59,8 +54,6 @@ const DevProcess = () => {
     color: '#27ae60',
   }]
 
-  
-
   return (
  <section className="dev-process-section py-5" >
   <div className="container">
@@ -98,7 +91,6 @@ const DevProcess = () => {
                 to="/contact"
                 className="btn btn-sm mt-2"
                 style={{
-              
                   color: 'white',
                   fontWeight: '500',
                   borderRadius: '20px',
@@ -115,9 +107,6 @@ const DevProcess = () => {
     </div>
   </div>
 </section>
-
-
-  );
-};
+)};
 
 export default DevProcess;

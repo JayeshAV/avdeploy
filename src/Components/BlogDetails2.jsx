@@ -49,7 +49,6 @@ const BlogDetails2 = () => {
               img: blog1,
               link: '/blog-details-1',
             },
-          
           ];
 
 
@@ -160,9 +159,7 @@ const BlogDetails2 = () => {
                     </div>
                     <h3 id="cross-platform-heading" class="mb-0">Cross-Platform Development</h3>
                 </div>
-                
                 <p>Modern frameworks like Flutter 5.0 and React Native 2025 allow building for multiple platforms from a single codebase, with near-native performance in many cases.</p>
-                
                 <div class="performance-comparison my-4 p-3 bg-light rounded-3">
                     <h5 class="text-center mb-3">2025 Performance Benchmarks</h5>
                     <div class="row align-items-center">
@@ -249,7 +246,6 @@ const BlogDetails2 = () => {
 
             <section class="decision-guide mt-5 p-4 p-md-5 bg-light rounded-4">
                 <h3 class="text-center mb-4">Which Approach is Right For You?</h3>
-                
                 <div class="row g-4">
                     <div class="col-lg-6">
                         <div class="decision-card h-100 p-4 rounded-3 border border-primary">
@@ -290,7 +286,6 @@ const BlogDetails2 = () => {
                     </div>
                 </div>
             </section>
-
                    <div class="cta-section mt-5 p-4 p-md-5 rounded-4 bg-gray border-1 text-white "   style={{background: `linear-gradient(to right, rgba(34, 33, 33, 0.4), rgba(51, 42, 29, 0.4)), url(${headerbg})`, backgroundSize: 'cover',
                        backgroundPosition: 'center',
                        backgroundRepeat: 'no-repeat' }} >
@@ -352,14 +347,11 @@ const BlogDetails2 = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-
       <div className="swiper-button-prev swiper-button-prev-2"></div>
       <div className="swiper-button-next swiper-button-next-2"></div>
     </div>
   </div>
 </section>
-
-
     </>
   )
 }

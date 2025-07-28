@@ -64,7 +64,6 @@ const Contact = () => {
 
   return (
     <>
-      {/* Hero Section */}
       <section className="section-hero m-0" style={sectionStyle}>
         <div className="container mw-800px d-flex flex-column gap-3 gap-md-5">
           <motion.div
@@ -88,7 +87,6 @@ const Contact = () => {
           fontFamily: "'Poppins', sans-serif",
           maxWidth: '100%'
         }}>
-          {/* Hero Section */}
           <Row className="mb-5 text-center">
             <Col>
               <h1 style={{ fontSize: 'clamp(28px, 5vw, 35px)', fontWeight: '500', color: 'black' }}>Get in Touch</h1>
@@ -96,7 +94,6 @@ const Contact = () => {
             </Col>
           </Row>
 
-          {/* Contact Cards */}
           <Row className="g-4 mb-5">
             {/* India Office */}
             <Col xs={12} md={6}>
@@ -144,7 +141,6 @@ const Contact = () => {
               </Card>
             </Col>
 
-            {/* USA Office */}
             <Col xs={12} md={6}>
               <Card style={{ 
                 border: 'none', 
@@ -181,7 +177,6 @@ const Contact = () => {
           </Row>
 
           <Row className="g-4">
-            {/* Contact Form */}
             <Col xs={12} md={7}>
               <Card style={{ 
                 border: 'none', 
@@ -216,7 +211,6 @@ const Contact = () => {
                       ) : <div style={{ height: '20px', marginBottom: '10px' }}></div>}
                     </Col>
                     
-                    {/* Email Field */}
                     <Col xs={12} md={6}>
                       <Form.Control 
                         name="email"
@@ -242,7 +236,6 @@ const Contact = () => {
                     </Col>
                   </Row>
 
-                  {/* Phone Number Field */}
                   <Form.Control 
                     name="phone"
                     placeholder="Phone Number*" 
@@ -265,7 +258,6 @@ const Contact = () => {
                     </div>
                   ) : <div style={{ height: '20px', marginBottom: '15px' }}></div>}
 
-                  {/* Message Field */}
                   <Form.Control 
                     as="textarea" 
                     name="subject"
@@ -310,7 +302,6 @@ const Contact = () => {
               </Card>
             </Col>
 
-            {/* Quick Contact */}
             <Col xs={12} md={5}>
               <Card style={{ 
                 border: 'none', 
@@ -321,7 +312,6 @@ const Contact = () => {
               }}>
                 <h3 style={{ color: 'black', marginBottom: '20px', fontSize: '1.3rem' }}>Quick Connect</h3>
                 
-                {/* Email */}
                 <div style={{ 
                   display: 'flex', 
                   alignItems: 'flex-start', 
@@ -351,7 +341,6 @@ const Contact = () => {
                   </div>
                 </div>
 
-                {/* LinkedIn */}
                 <div style={{ 
                   display: 'flex', 
                   alignItems: 'flex-start', 
@@ -383,7 +372,6 @@ const Contact = () => {
                   </div>
                 </div>
 
-                {/* WhatsApp */}
                 <div style={{ 
                   display: 'flex', 
                   alignItems: 'flex-start', 
@@ -415,7 +403,6 @@ const Contact = () => {
                   </div>
                 </div>
 
-                {/* Support Hours */}
                 <div style={{ 
                   display: 'flex', 
                   alignItems: 'flex-start',
@@ -474,7 +461,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* USA Map */}
             <div className="col-12 col-md-6">
               <h3 style={{ fontSize: '1.3rem' }}>USA</h3>
               <div className="map" style={{ height: '300px' }}>

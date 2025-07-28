@@ -9,7 +9,6 @@ import PortfolioSection from "../Components/PortfolioSection";
 import BlogSlider from "../Components/Blogslider";
 import TechSection from "../Components/TechSection";
 
-// Animation Variants
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -23,7 +22,6 @@ const Blog = () => {
     backgroundRepeat: 'no-repeat'
   };
 
-  // Blog data to simplify mapping
   const blogPosts = [
     {
       link: "/blog-details-1",
@@ -65,7 +63,6 @@ const Blog = () => {
 
   return (
     <>
-      {/* Hero Section */}
       <motion.section
         className="section-hero m-0 "
         style={sectionStyle}
@@ -85,7 +82,6 @@ const Blog = () => {
         </div>
       </motion.section>
 
-      {/* Blogs */}
   <section className="section section-home py-5" style={{ backgroundColor: '#fafafa' }}>
   <div className="container">
     <motion.div
@@ -137,7 +133,6 @@ const Blog = () => {
                 position: 'relative'
               }}
             >
-              {/* Featured badge */}
               {index === 0 && (
                 <div style={{
                   position: 'absolute',
@@ -155,7 +150,6 @@ const Blog = () => {
                 </div>
               )}
 
-              {/* Image with gradient overlay */}
               <div style={{ position: 'relative', height: '220px', overflow: 'hidden' }}>
                 <motion.img 
                   src={post.img} 
@@ -179,9 +173,7 @@ const Blog = () => {
                 }} />
               </div>
 
-              {/* Content */}
               <div className="p-4 pb-5" style={{ position: 'relative' }}>
-                {/* Category tag */}
                 <span style={{
                   display: 'inline-block',
                   backgroundColor: '#f1f3f5',

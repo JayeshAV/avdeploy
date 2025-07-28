@@ -62,7 +62,6 @@ const BlogSlider = () => {
       if (prevBtn) prevBtn.style.opacity = swiper.isBeginning ? '0' : '1';
       if (nextBtn) nextBtn.style.opacity = swiper.isEnd ? '0' : '1';
     };
-
     setTimeout(updateNavButtons, 1000);
   }, []);
 
@@ -194,7 +193,6 @@ const BlogSlider = () => {
                         <p className="mb-4" style={{ color: '#6b7280', fontSize: '15px' }}>
                           {blog.desc.length > 120 ? `${blog.desc.substring(0, 120)}...` : blog.desc}
                         </p>
-
                       </div>
                     </div>
                   </Link>

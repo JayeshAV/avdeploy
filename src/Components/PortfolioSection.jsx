@@ -382,7 +382,6 @@ const PortFolioSection = () => {
       </h2>
 
       <Container className="position-relative">
-        {/* Background Layer Box for Desktop */}
         <div
           style={{
             position: 'absolute',
@@ -399,7 +398,7 @@ const PortFolioSection = () => {
         ></div>
 
         <Swiper
-          modules={[Pagination, Navigation]}
+          modules={[ Navigation]}
           spaceBetween={30}
           pagination={{ clickable: true }}
           navigation={{
@@ -428,7 +427,6 @@ const PortFolioSection = () => {
                     ))}
                   </ul>
 
-                  {/* View More Link styled like a Button */}
                   <div className="d-flex flex-wrap gap-2">
                     <Link
                       to={project.path}
@@ -462,7 +460,6 @@ const PortFolioSection = () => {
           ))}
         </Swiper>
 
-        {/* Swiper Navigation Buttons */}
         <div className="d-flex justify-content-center  mt-4">
           <button className="custom-swiper-prev btn btn-light rounded-circle shadow-sm px-3 py-2">
             ❮

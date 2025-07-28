@@ -21,9 +21,6 @@ const HomeDecor = () => {
   return (
     <>
       <div>
-        {/* Hero Section */}
-      
-
         <section className="section-hero" style={sectionStyle}>
         <div className="container container-800px d-flex flex-column gap-3 gap-md-5">
           <div className="d-flex flex-column">
@@ -35,7 +32,6 @@ const HomeDecor = () => {
         </div>
       </section>
 
-        {/* Project Solution Section */}
         <section className="py-5 px-3 px-md-4">
           <div className="container">
             <div className="row align-items-center mb-5">
@@ -55,7 +51,6 @@ const HomeDecor = () => {
               </div>
             </div>
 
-            {/* Responsibilities Section */}
             <div className="row align-items-center">
               <div className="col-12 col-md-6 order-2 order-md-1">
                 <h3 className="h3 mb-3">Responsibilities:</h3>
@@ -80,7 +75,6 @@ const HomeDecor = () => {
           </div>
         </section>
 
-        {/* Technologies Section */}
         <section className="section section-home mb-5 pb-md-5">
           <div 
             className="container bg-content d-flex flex-column gap-4 gap-md-5 py-md-5 br-32 text-white text-center"

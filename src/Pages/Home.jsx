@@ -233,7 +233,6 @@ const Home = () => {
 
   return (
     <>
-      {/* Hero Section */}
       <section className="section-hero hero-height-fix m-0" style={sectionStyle}>
 
         <div className="container container-800px d-flex flex-column gap-3 gap-md-5">
@@ -347,12 +346,10 @@ const Home = () => {
             </motion.p>
           </motion.div>
 
-          {/* Feature Grid */}
           <motion.div
             className="grid-5-col d-flex flex-xl-row flex-wrap flex-xl-nowrap justify-content-center gap-4 gap-xl-5"
             variants={staggerContainer}
           >
-            {/* Feature Cards */}
             {[
               {
                 icon: "💼",
@@ -417,7 +414,6 @@ const Home = () => {
         </div>
       </motion.section>
 
-      {/* offer Section */}
       <motion.section
         className="section section-home section-services"
         initial="hidden"
@@ -564,7 +560,6 @@ const Home = () => {
         </div>
       </motion.section>
 
-      {/* Structure Process */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -716,7 +711,6 @@ const Home = () => {
   </div>
 </motion.section> */}
 
-      {/* Portfolio Section */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -727,7 +721,6 @@ const Home = () => {
       </motion.div>
 
 
-      {/* Testimonials */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -738,7 +731,6 @@ const Home = () => {
       </motion.div>
 
 
-      {/* Blog Slider */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -748,10 +740,8 @@ const Home = () => {
         <BlogSlider />
       </motion.div>
 
-      {/* Tech Section */}
 
 
-      {/* industrie section */}
       <div className="container-fluid  bg-gray" >
         <div className="container" style={{ padding: '70px 0' }}>
           <div className="row justify-content-center">
@@ -821,7 +811,7 @@ const Home = () => {
                         fontSize: 'clamp(0.75rem, 1.8vw, 0.95rem)',
                         lineHeight: '1.3',
                         textAlign: 'center',
-                        maxWidth: '100%'  // ensure text doesn't overflow
+                        maxWidth: '100%'  
                       }}
                     >
                       {industry.title}
@@ -862,7 +852,6 @@ const Home = () => {
       `}</style>
       </div>
 
-      {/* ///faq Section */}
       <section className="faq-section" id="faqs" >
 
         <div className="container">

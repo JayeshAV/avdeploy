@@ -63,9 +63,6 @@ const Faq = () => {
 
   return (
     <>
-      {/* FAQ Hero Section */}
-     
-
        <section className="section-hero" style={sectionStyle}>
         <div className="container container-800px d-flex flex-column gap-3 gap-md-5">
           <div className="d-flex flex-column">
@@ -77,7 +74,6 @@ const Faq = () => {
         </div>
       </section> 
 
-      {/* FAQ Accordion Section */}
       <section className="faq-section pt-5" id="faqs">
         <div className="container">
           <div className="accordion" id="faqAccordion">

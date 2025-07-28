@@ -204,7 +204,6 @@ const staggerContainer = {
     return (
       <>
       <div>
-        {/* 🌟 Hero */}
         <motion.section
       className="section-hero"
       style={sectionStyle}
@@ -223,11 +222,9 @@ const staggerContainer = {
       </div>
     </motion.section>
 
-        {/* 💼 Jobs */}
 
     
       <div style={{ backgroundColor: '#f8f9fa',margin:'0%' }} >
-        {/* Hero Section */}
       
       <section>
         <section style={{
@@ -271,8 +268,6 @@ const staggerContainer = {
           </div>
         </section>
 
-        {/* Open Positions */}
-           {/* 🧠 Open Positions with animation */}
       <motion.section
         id="open-positions"
         initial="hidden"
@@ -394,7 +389,6 @@ const staggerContainer = {
       </motion.section>
         </section>
 
-        {/* Benefits Section */}
        <section style={{ padding: '6rem 0', backgroundColor: 'white' }}>
         <div className="container">
           <div className="text-center mb-5">
@@ -460,8 +454,7 @@ const staggerContainer = {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        {/* Form section exactly same as you had it – include formik fields, error display, and styles */}
-        {/* Skip rewriting form here to save space since it's already detailed in your input */}
+        
       </motion.section>
 
       <section style={{ padding: '2rem 0' }}>

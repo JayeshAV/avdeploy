@@ -32,11 +32,9 @@ const Footmetrics = () => {
         </div>
       </section>
 
-      {/* Content Section */}
       <section className="section py-md-5 py-4 px-3">
         <div className="container d-flex flex-column gap-5">
 
-          {/* Row 1 */}
           <div className="row align-items-center g-4">
             <div className="col-12 col-md-6">
               <img src={footmetricsImg} alt="Footmetrics" className="img-fluid rounded shadow w-100 h-25" />
@@ -52,7 +50,6 @@ const Footmetrics = () => {
             </div>
           </div>
 
-          {/* Row 2 */}
           <div className="row align-items-center g-4">
             <div className="col-12 col-md-6 order-2 order-md-1">
               <h3>Responsibilities:</h3>
@@ -72,7 +69,6 @@ const Footmetrics = () => {
             </div>
           </div>
 
-          {/* Achievements */}
           <div className="bg-light rounded p-4 p-md-5 shadow">
             <h3 className="text-center mb-3">Achievements:</h3>
             <p>
@@ -85,7 +81,6 @@ const Footmetrics = () => {
         </div>
       </section>
 
-      {/* Technologies Section */}
       <section className="section pb-md-5 pb-4">
         <div className="container">
           <div className="bg-dark text-white rounded p-4 p-md-5" style={{
@@ -122,7 +117,6 @@ const Footmetrics = () => {
         </div>
       </section>
 
-      {/* Portfolio Section */}
       <div className="mb-5">
         <PortfolioSection />
       </div>

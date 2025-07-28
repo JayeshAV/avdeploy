@@ -93,13 +93,12 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg px-0" ref={navRef}>
         <div className="container-fluid" style={{ padding: "0 8px" , width: "95%",margin: "0 auto" }}>
           <div className="d-flex justify-content-between align-items-center w-100" style={{ minHeight: "40px"}}>
-            {/* Logo */}
             <Link 
               to="/" 
               className="navbar-brand d-flex align-items-center text-decoration-none flex-shrink-0" 
               style={{ 
                 minWidth: "fit-content",
-                maxWidth: "calc(100vw - 80px)" // Leave space for hamburger
+                maxWidth: "calc(100vw - 80px)" 
               }}
             >
               <img 
@@ -126,7 +125,6 @@ const Navbar = () => {
               </span>
             </Link>
 
-            {/* Hamburger Toggle */}
             <button
               className="navbar-toggler border-0 bg-transparent p-1 d-lg-none flex-shrink-0"
               type="button"
@@ -149,7 +147,6 @@ const Navbar = () => {
               ></i>
             </button>
 
-            {/* Desktop Nav */}
             <div className="d-none d-lg-flex align-items-center flex-shrink-0">
               <ul className="navbar-nav d-flex flex-row align-items-center mb-0">
                 {[
@@ -174,7 +171,6 @@ const Navbar = () => {
                   </li>
                 ))}
 
-                {/* Company Dropdown */}
                 <li
                   className="nav-item dropdown position-relative"
                   onMouseEnter={() => setCompanyDropdownOpen(true)}
@@ -222,7 +218,6 @@ const Navbar = () => {
                   </ul>
                 </li>
 
-                {/* Schedule Button */}
                 <li className="nav-item ms-2">
                   <Link
                     to="/contact"
@@ -246,7 +241,6 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Mobile Menu */}
           <div
             className={`mobile-nav-collapse d-lg-none ${mobileMenuOpen ? "open" : ""}`}
             id="navbarNav"

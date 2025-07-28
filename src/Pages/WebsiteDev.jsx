@@ -531,7 +531,7 @@ const WebsiteDev = () => {
 
       <PortFolioSection />
       <Blogslider />
-        <TechSection />
+      <TechSection />
     
     </>
   );

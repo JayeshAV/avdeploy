@@ -63,7 +63,6 @@ const Portfolio = () => {
   <section className="section section-home pb-md-5" style={{ backgroundColor: '#f8f9fa' }}>
   <div className="container d-flex flex-column gap-4 gap-md-5">
     <div className="row g-4">
-      {/* Portfolio Item 1 - Added hover effects and transition */}
       <div className="col-md-6">
         <Link 
           to="/portfolio-details-1" 
@@ -103,7 +102,6 @@ const Portfolio = () => {
         </Link>
       </div>
 
-      {/* Portfolio Item 2 */}
       <div className="col-md-6">
         <Link 
           to="/portfolio-details-2" 
@@ -143,7 +141,6 @@ const Portfolio = () => {
         </Link>
       </div>
 
-      {/* Portfolio Item 3 */}
       <div className="col-md-6">
         <Link 
           to="/portfolio-details-3" 
@@ -183,7 +180,6 @@ const Portfolio = () => {
         </Link>
       </div>
 
-      {/* Portfolio Item 4 */}
       <div className="col-md-6">
         <Link 
           to="/portfolio-details-4" 

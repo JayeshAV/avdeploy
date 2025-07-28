@@ -9,7 +9,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 
 const Testimonials = () => {
-  // Internal CSS as JavaScript objects
   const styles = {
     section: {
       padding: '80px 0',
@@ -32,15 +31,15 @@ const Testimonials = () => {
   background: 'white',
   borderRadius: '12px',
   padding: '30px',
-  minHeight: '300px', // minimum height but can grow
-  maxHeight: '400px', // maximum height
-  height: 'auto', // flexible height
+  minHeight: '300px', 
+  maxHeight: '400px', 
+  height: 'auto', 
   boxShadow: '0 5px 15px rgba(0, 0, 0, 0.05)',
   transition: 'transform 0.3s ease',
-  overflow: 'auto', // scroll if content exceeds max height
+  overflow: 'auto',
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'space-between' // spaces content evenly
+  justifyContent: 'space-between' 
 },
     testimonialCardHover: {
       transform: 'translateY(-5px)'
