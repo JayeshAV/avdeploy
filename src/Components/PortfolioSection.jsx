@@ -398,7 +398,7 @@ const PortFolioSection = () => {
         ></div>
 
         <Swiper
-          modules={[ Navigation]}
+          modules={[Navigation]}
           spaceBetween={30}
           pagination={{ clickable: true }}
           navigation={{
@@ -460,7 +460,7 @@ const PortFolioSection = () => {
           ))}
         </Swiper>
 
-        <div className="d-flex justify-content-center  mt-4">
+        <div className="d-flex justify-content-center mt-5">
           <button className="custom-swiper-prev btn btn-light rounded-circle shadow-sm px-3 py-2">
             ❮
           </button>
