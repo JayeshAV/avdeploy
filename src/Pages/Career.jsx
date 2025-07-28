@@ -508,7 +508,7 @@ const staggerContainer = {
       </div>
       </div>
 
-          <TechSection />
+      <TechSection />
       </>
     );
   };

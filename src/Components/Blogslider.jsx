@@ -95,7 +95,7 @@ const BlogSlider = () => {
           viewport={{ once: true }}
           className="text-center mb-10"
         >
-          <h2 className="display-5 mt-5 mb-3" style={{ color: '#111827', position: 'relative', display: 'inline-block' }}>
+          <h2 className="display-5 mt-5 mb-3" style={{ color: '#111827', position: 'relative', display: 'inline-block',fontSize: '38px' }}>
             Our Latest Blogs
           </h2>
           <p className="lead mx-auto mb-5" style={{ maxWidth: '700px', color: '#4b5563' }}>

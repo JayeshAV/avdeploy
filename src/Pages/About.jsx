@@ -120,7 +120,7 @@ const About = () => {
                 thrive in the digital age. With a team of experienced professionals, we specialize in providing cutting-edge software development,
                 cloud computing, and IT consulting services tailored to meet the unique needs of our clients.
               </p>
-              <Link to="contact" className='btn btn-primary icon-arrow-w m-auto m-sm-0'>Contact Us</Link>
+              <Link to="/contact" className='btn btn-primary icon-arrow-w m-auto m-sm-0'>Contact Us</Link>
             </motion.div>
           </div>
         </div>

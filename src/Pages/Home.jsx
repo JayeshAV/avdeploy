@@ -14,7 +14,6 @@ import Testimonials from '../Components/Testimonials';
 import "../../src/assets/css/FaqSection.css";
 import { Loader } from 'lucide-react';
 
-
 const fadeInUp = {
   hidden: { opacity: 0, y: 60 },
   visible: {
@@ -26,6 +25,7 @@ const fadeInUp = {
     }
   }
 }
+
 const fadeInLeft = {
   hidden: { opacity: 0, x: -60 },
   visible: {
@@ -217,8 +217,6 @@ const Home = () => {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat'
-
-
   };
 
   const gridStyle = {
@@ -314,7 +312,6 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
-
       
       <motion.section
         className="section section-home bg-gray"
@@ -325,7 +322,6 @@ const Home = () => {
       >
 
         <div className="container d-flex flex-column gap-4 gap-md-5" style={{ padding: '80px 0' }}>
-
           <motion.div
             className="d-flex flex-column align-items-center gap-2"
             variants={fadeInUp}
@@ -335,9 +331,8 @@ const Home = () => {
               variants={staggerItem}
               style={{ fontSize: '35px' }}
             >
-              Why Choose Avatara Technobiz?
+              Why Choose Avatara Technobiz ?
             </motion.h2>
-
             <motion.p
               className="text-20 text-center"
               variants={staggerItem}
@@ -431,7 +426,7 @@ const Home = () => {
               variants={staggerItem}
               style={{ fontSize: '38px' }}
             >
-              What We Offer?
+              What We Offer ?
             </motion.h2>
             <motion.p
               className="text-20 text-center mb-0"
@@ -720,7 +715,6 @@ const Home = () => {
         <PortfolioSection />
       </motion.div>
 
-
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -729,7 +723,6 @@ const Home = () => {
       >
         <Testimonials />
       </motion.div>
-
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -740,15 +733,11 @@ const Home = () => {
         <BlogSlider />
       </motion.div>
 
-
-
       <div className="container-fluid  bg-gray" >
         <div className="container" style={{ padding: '70px 0' }}>
           <div className="row justify-content-center">
             <div className="col-12 col-lg-10 col-xl-8">
               <div className="text-center mb-5">
-
-
                 <motion.h2
                   className="mb-2    ts-0 text-center"
                   variants={staggerItem}
@@ -756,8 +745,6 @@ const Home = () => {
                 >
                   Industries We Specialize In
                 </motion.h2>
-
-
                 <motion.p
                   className="text-18 text-center mt-2"
                   variants={staggerItem}
@@ -821,10 +808,7 @@ const Home = () => {
               </div>
             ))}
           </div>
-
         </div>
-
-
 
         <style jsx>{`
         @media (max-width: 575px) {
@@ -832,19 +816,16 @@ const Home = () => {
             min-height: 120px;
           }
         }
-        
         @media (min-width: 576px) and (max-width: 767px) {
           .card {
             min-height: 140px;
           }
         }
-        
         @media (min-width: 768px) {
           .card {
             min-height: 160px;
           }
         }
-        
         .card:hover {
           transform: translateY(-5px);
           box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
@@ -853,7 +834,6 @@ const Home = () => {
       </div>
 
       <section className="faq-section" id="faqs" >
-
         <div className="container">
           <h2 className="text-center mb-5 " style={{ fontSize: '35px' }}>FAQ's</h2>
           <div className="accordion" id="faqAccordion">
@@ -886,17 +866,13 @@ const Home = () => {
             <Link to="/faq" className="btn text-white =" style={{backgroundColor:"#E0902C",margin:"auto",textAlign:"center",display:"block",width:"fit-content",padding:"10px 20px",borderRadius:"5px"}}>
               View All FAQs
             </Link>
-
           </div>
         </div>
       </section>
-
       <TechSection />
-
     </>
   )
 }
-
 export default Home
 
 

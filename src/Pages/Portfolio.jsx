@@ -242,12 +242,10 @@ const Portfolio = () => {
   </div>
 </section>
 
-
-
-            <PortfolioSection />
+      <PortfolioSection />
       <Testimonials />
       <BlogSlider />
-        <TechSection />
+      <TechSection />
     </>
   );
 };

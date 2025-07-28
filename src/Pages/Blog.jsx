@@ -246,17 +246,12 @@ const Blog = () => {
         </motion.div>
       ))}
     </div>
-
-
   </div>
 </section>
 
-
-       <PortfolioSection />
+      <PortfolioSection />
       <BlogSlider />
-     
-        <TechSection />
-
+      <TechSection />
     </>
   );
 };

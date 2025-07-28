@@ -151,7 +151,7 @@ const testimonials = [
 
   
  
-          <h2 style={{fontSize:'35px'}}>What Our Client Says</h2>
+          <h2 style={{fontSize:'38px'}}>What Our Client Says</h2>
         </div>
 
         <div className="testimonials-container">

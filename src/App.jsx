@@ -19,7 +19,7 @@ import BlogDetails1 from './Components/BlogDetails1';
 import BlogDetails2 from './Components/BlogDetails2';
 import BlogDetails3 from './Components/BlogDetails3';
 import Career from './Pages/Career';
-import Loader from './Components/Loader'; // 🔥 Import loader
+import Loader from './Components/Loader'; 
 import ErrorBoundary from './Components/Loader';
 import Faq from './Components/Faq';
 
@@ -56,7 +56,7 @@ function App() {
             <Route path='/faq' element={<Faq />} />
           </Routes>
           <Footer />
-          </ErrorBoundary>
+        </ErrorBoundary>
         </>
       
     </>

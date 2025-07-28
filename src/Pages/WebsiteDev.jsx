@@ -532,7 +532,6 @@ const WebsiteDev = () => {
       <PortFolioSection />
       <Blogslider />
       <TechSection />
-    
     </>
   );
 };
