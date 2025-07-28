@@ -319,9 +319,9 @@ const PortFolioSection = () => {
       id: 1,
       number: '01',
       title: 'Leonardo247',
-      description: 'A platform designed to streamline maintenance and operation workflows for property owners and operators',
+      description: 'A platform designed to streamline maintenance. ',
       features: [
-        'Built backend using Python, Django, and DRF.',
+        'Built backend using Python, Django.',
         'Integrated SBA APIs with 3rd-party services.'
       ],
       image: projectImg1,
@@ -331,10 +331,10 @@ const PortFolioSection = () => {
       id: 2,
       number: '02',
       title: 'footmetrics.io',
-      description: 'Tech solution involving React, Python, Django, Flask, JS, Microservices.',
+      description: 'Tech solution involving React, Python, Django, Flask, JS.',
       features: [
-        'Launched Footmetrics.io MVP and web platform.',
-        'Enabled hardware configuration + footfall analytics.'
+        'Launched Footmetrics.io web platform.',
+        'Enabled hardware configuration analytics.'
       ],
       image: projectImg2,
       path: "/portfolio-details-2"
