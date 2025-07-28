@@ -114,7 +114,7 @@ const Navbar = () => {
               <span 
                 className="ms-2 fw-bold text-white d-inline-block" 
                 style={{ 
-                  fontSize: "clamp(12px, 3.5vw, 20px)", 
+                  fontSize: "clamp(17px, 3.5vw, 20px)", 
                   whiteSpace: "nowrap",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
