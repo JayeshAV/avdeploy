@@ -1,0 +1,202 @@
+@charset "UTF-8";
+.our-services {
+  width: 1400px !important;
+  padding-top: 80px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.our-ser-box-icon img {
+  height: 50px;
+  width: 50px;
+  border-radius: 30%;
+}
+
+.our-services .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.our-ser-box-icon {
+  position: relative;
+  z-index: 1;
+  font-size: 3rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.our-services .row {
+  margin: 0%;
+  max-width: 100%;
+}
+
+.our-services-title {
+  text-align: center;
+  padding-bottom: 12px;
+}
+
+.our-services-title h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.our-services-title p {
+  font-size: 1.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #666;
+}
+
+.our-ser-box {
+  background: #fff;
+  padding: 50px 20px;
+  border-radius: 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 12px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  text-align: center;
+}
+
+.our-ser-box:hover {
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+}
+
+.our-ser-box-icon {
+  font-size: 3rem;
+}
+
+.our-services-web-title a {
+  color: #022d62;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.our-services-web-title a:hover {
+  color: #e0a63b;
+}
+
+.our-ser-box p {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 0;
+}
+
+/* Tablet – 768px and up */
+@media (min-width: 768px) {
+  .our-services {
+    max-width: 1400px;
+  }
+  .our-services-title h2 {
+    font-size: 2.2rem;
+  }
+  .our-services-title p {
+    font-size: 1.05rem;
+  }
+  .our-ser-box {
+    padding: 30px 30px;
+    gap: 16px;
+  }
+  .our-services-web-title a {
+    font-size: 1.2rem;
+  }
+  .our-ser-box p {
+    font-size: 1rem;
+  }
+}
+/* Small Laptop – 1024px and up */
+@media (min-width: 1024px) {
+  .our-services {
+    max-width: 1400px;
+  }
+  .our-services .row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Fixed 5 columns */
+    margin: 0%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .our-services-title h2 {
+    font-size: 2rem;
+  }
+  .our-services-title p {
+    font-size: 1rem;
+  }
+  .our-ser-box {
+    padding: 50px 10px;
+    gap: 10px;
+  }
+  .our-ser-box-icon {
+    font-size: 2rem;
+  }
+  .our-services-web-title a {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 1280px) {
+  .our-services {
+    width: 1400px;
+  }
+  .our-services .row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    margin: 0%;
+  }
+  .our-services-title h2 {
+    font-size: 3rem;
+  }
+  .our-services-title p {
+    font-size: 1rem;
+    max-width: 800px;
+  }
+  .our-ser-box {
+    padding: 20px 7px;
+    gap: 10px;
+  }
+  .our-ser-box-icon {
+    font-size: 3rem;
+  }
+  .our-services-web-title a {
+    font-size: 1.2rem;
+  }
+  .our-ser-box p {
+    font-size: 1.05rem;
+  }
+}/*# sourceMappingURL=WhyChoose.css.map */

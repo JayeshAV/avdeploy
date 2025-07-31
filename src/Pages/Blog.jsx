@@ -63,191 +63,103 @@ const Blog = () => {
 
   return (
     <>
-      <motion.section
-        className="section-hero m-0 "
-        style={sectionStyle}
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      >
-        <div className="container mw-800px d-flex flex-column gap-3 gap-md-5">
-          <div className="d-flex flex-column">
-            <h1 className="text-center">Our Latest Blogs</h1>
-            <p className="text-22 text-white text-center">
-              Stay updated with the latest industry trends, expert insights, and
+
+    <motion.section
+  className="section-hero"
+  variants={fadeUp}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+>
+  <div className="hero-container">
+    <div className="hero-content">
+      <h2>Our Latest Blogs</h2>
+      <p>
+       Stay updated with the latest industry trends, expert insights, and
               company updates.
-            </p>
-          </div>
-        </div>
-      </motion.section>
-
-  <section className="section section-home py-5" style={{ backgroundColor: '#fafafa' }}>
-  <div className="container">
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="text-center mb-5"
-    >
-      <h2 className="display-5 mb-3" >Insights & Innovations</h2>
-      <p className="lead" style={{ color: '#636e72', maxWidth: '700px', margin: '0 auto' }}>
-        Discover our latest thinking on design, technology and business transformation
       </p>
-    </motion.div>
-
-    <div className="row g-4 g-lg-5">
-      {blogPosts.map((post, index) => (
-        <motion.div
-          key={index}
-          className="col-12 col-md-6 col-lg-4"
-          variants={{
-            hidden: { opacity: 0, y: 50 },
-            visible: { 
-              opacity: 1, 
-              y: 0,
-              transition: {
-                delay: index * 0.1,
-                duration: 0.6,
-                ease: [0.16, 1, 0.3, 1]
-              }
-            }
-          }}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          <Link 
-            to={post.link} 
-            className="d-block text-decoration-none h-100"
-          >
-            <motion.div
-              className="h-100"
-              whileHover={{ y: -8 }}
-              style={{
-                background: 'white',
-                borderRadius: '24px',
-                overflow: 'hidden',
-                boxShadow: '0 10px 30px -10px rgba(0,0,0,0.05)',
-                border: '1px solid rgba(0,0,0,0.03)',
-                position: 'relative'
-              }}
-            >
-              {index === 0 && (
-                <div style={{
-                  position: 'absolute',
-                  top: '16px',
-                  right: '16px',
-                  backgroundColor: '#ff6b6b',
-                  color: 'white',
-                  padding: '4px 12px',
-                  borderRadius: '20px',
-                  fontSize: '12px',
-                  fontWeight: '600',
-                  zIndex: '2'
-                }}>
-                  Featured
-                </div>
-              )}
-
-              <div style={{ position: 'relative', height: '220px', overflow: 'hidden' }}>
-                <motion.img 
-                  src={post.img} 
-                  alt={post.title}
-                  className="w-100 h-100 object-cover"
-                  initial={{ scale: 1 }}
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.4 }}
-                  style={{
-                    borderTopLeftRadius: '24px',
-                    borderTopRightRadius: '24px'
-                  }}
-                />
-                <div style={{
-                  position: 'absolute',
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  height: '60%',
-                  background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%)'
-                }} />
-              </div>
-
-              <div className="p-4 pb-5" style={{ position: 'relative' }}>
-                <span style={{
-                  display: 'inline-block',
-                  backgroundColor: '#f1f3f5',
-                  color: '#495057',
-                  padding: '4px 12px',
-                  borderRadius: '20px',
-                  fontSize: '12px',
-                  fontWeight: '600',
-                  marginBottom: '12px'
-                }}>
-                  {post.category || 'Technology'}
-                </span>
-
-                <h3 className="h4 mb-3" style={{ color: '#2d3436', minHeight: '60px' }}>
-                  {post.title}
-                </h3>
-
-                <p className="mb-4" style={{ color: '#636e72', fontSize: '15px' }}>
-                  {post.desc.length > 100 ? `${post.desc.substring(0, 100)}...` : post.desc}
-                </p>
-
-                {/* Author and date */}
-                {/* <div className="d-flex align-items-center" style={{ color: '#adb5bd' }}>
-                  <div style={{
-                    width: '32px',
-                    height: '32px',
-                    borderRadius: '50%',
-                    backgroundColor: '#e9ecef',
-                    marginRight: '12px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                  }}>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                      <circle cx="12" cy="7" r="4"></circle>
-                    </svg>
-                  </div>
-                  <div>
-                    <div style={{ fontSize: '13px', fontWeight: '600', color: '#495057' }}>
-                      {post.author || 'Team Member'}
-                    </div>
-                    <div style={{ fontSize: '12px' }}>
-                      {post.date || new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
-                    </div>
-                  </div>
-                </div> */}
-
-                {/* Read more arrow */}
-                <div style={{
-                  position: 'absolute',
-                  bottom: '20px',
-                  right: '20px',
-                  width: '36px',
-                  height: '36px',
-                  borderRadius: '50%',
-                  backgroundColor: '#f1f3f5',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  transition: 'all 0.3s ease'
-                }}>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </div>
-              </div>
-            </motion.div>
-          </Link>
-        </motion.div>
-      ))}
     </div>
   </div>
-</section>
+</motion.section>
+
+
+
+      <section className="blog-posts">
+        <div className="sub-posts">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="blog-posts-header"
+        >
+          <h2>Insights & Innovations</h2>
+          <p>
+            Discover our latest thinking on design, technology and business transformation
+          </p>
+        </motion.div>
+
+        <div className="blog-grid">
+          {blogPosts.map((post, index) => (
+            <motion.div
+              key={index}
+              className={`blog-card-wrapper ${index === 0 ? 'featured' : ''}`}
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { 
+                  opacity: 1, 
+                  y: 0,
+                  transition: {
+                    delay: index * 0.1,
+                    duration: 0.6,
+                    ease: [0.16, 1, 0.3, 1]
+                  }
+                }
+              }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+            >
+              <Link to={post.link} className="blog-card-link">
+                <motion.div
+                  className="blog-card"
+                  whileHover={{ y: -8 }}
+                >
+                  {index === 0 && <div className="featured-badge">Featured</div>}
+
+                  <div className="blog-card-image">
+                    <motion.img 
+                      src={post.img} 
+                      alt={post.title}
+                      initial={{ scale: 1 }}
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.4 }}
+                    />
+                  </div>
+
+                  <div className="blog-card-content">
+                    <span className="blog-category">
+                      {post.category || 'Technology'}
+                    </span>
+
+                    <h3>{post.title}</h3>
+                    <p>
+                      {post.desc.length > 100 ? `${post.desc.substring(0, 100)}...` : post.desc}
+                    </p>
+
+                    <div className="read-more">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </motion.div>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+        </div>
+      </section>
+
 
       <PortfolioSection />
       <BlogSlider />

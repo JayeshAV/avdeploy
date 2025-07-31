@@ -44,17 +44,18 @@ const TechSection = () => {
       background: `linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${headerbg})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat'
+      backgroundRepeat: 'no-repeat',
+      marginTop:"80px"
     };
 
   return (
     <section className="section section-home  bg-content " style={sectionStyle}>
-      <div className="d-flex flex-column gap-4 gap-md-5 " style={{ padding: '80px 0' }}>
+      <div className="d-flex flex-column gap-4 " style={{ padding: '60px 0' }}>
         <div className="mw-800px d-flex flex-column align-items-center px-4 gap-2 m-auto">
-          <h2 className="mb-2   ts-0 text-center text-white"  style={{fontSize: '35px'}}>
+          <h2 className="mb-2   ts-0 text-center text-white case-heading"  >
             Technologies We Work On
           </h2>
-          <p className="text-20 text-center text-white">
+          <p className="text-center text-white case-subtitle w-100" >
             Here are some of the latest technologies and frameworks we master in.
           </p>
         </div>

@@ -1,0 +1,138 @@
+/* Base - Mobile First */
+.why-us-wrapper {
+  max-width: 1400px;
+  margin: auto;
+  margin-bottom: 40px;
+  padding-top: 80px;
+  padding-bottom: 12px;
+}
+
+.why-us-text {
+  background-color: #609cbd;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.why-us-title {
+  text-align: center;
+}
+
+.why-us-title h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding-top: 40px;
+}
+
+.why-us-title h3 {
+  color: #FFC107;
+}
+
+.why-us-title p {
+  font-size: 10px;
+  color: #666666;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.why-us-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 50px;
+  gap: 20px;
+}
+
+.why-us-row.reverse {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.why-us-text,
+.why-us-img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 10px;
+}
+
+.why-box {
+  margin-bottom: 25px;
+}
+
+.why-box h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #FFC107;
+}
+
+.why-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white;
+  margin: 0;
+}
+
+.why-us-img img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+/* Breakpoints */
+@media (min-width: 768px) {
+  .why-us-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .why-us-row.reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .why-us-title h2 {
+    font-size: 2.4rem;
+  }
+  .why-us-title p {
+    font-size: 1.1rem;
+  }
+  .why-box h3 {
+    font-size: 1.6rem;
+  }
+  .why-box p {
+    font-size: 1.05rem;
+  }
+}
+@media (min-width: 1024px) {
+  .why-us-text,
+  .why-us-img {
+    padding: 30px;
+  }
+}
+@media (min-width: 1280px) {
+  .why-us-wrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 0%;
+    padding-bottom: 0%;
+  }
+  .why-us-title h2 {
+    font-size: 2.8rem;
+  }
+  .why-us-title p {
+    font-size: 1.2rem;
+  }
+}/*# sourceMappingURL=offer.css.map */

@@ -5,12 +5,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import headerbg from "../assets/images/header-bg.jpg";
 import { motion } from "framer-motion";
-import "../assets/css/style.css";
+import "../assets/css/scss/style.css"
 import PortFolioSection from '../Components/PortfolioSection';
 import Blogslider from '../Components/Blogslider';
 import TechSection from '../Components/TechSection';
-// import { Container, Row, Col, Tab, Nav } from 'react-bootstrap';
-// import { motion } from 'framer-motion';
 
 
 const services = [
@@ -185,9 +183,6 @@ const services = [
   }
 ];
 
-
-
-
 const WebsiteDev = () => {
   const sectionStyle = {
     background: `linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${headerbg})`,
@@ -220,314 +215,159 @@ const WebsiteDev = () => {
   };
   return (
     <>
-      <section
-        className="section-hero section-hero.hero-height-fix"
-        style={sectionStyle}
-      >
-        <div className="container container-800px d-flex flex-column gap-3 gap-md-5">
-          <motion.div
-            className="d-flex flex-column"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+              <section
+            className="section-hero"
           >
-            <h1 className="text-center">
-              We Drive Innovation, <br />
-              You Lead the Market.
-            </h1>
-            <p className="text-22 text-white text-center">
-              At Avatara Technobiz, we harness the power of technology to fuel
+            <div className="hero-container">
+              <div className="hero-content">
+                <h2>We Drive Innovation, <br />
+              You Lead the Market.</h2>
+                <p className="w-100">
+                   At Avatara Technobiz, we harness the power of technology to fuel
               business innovation. From streamlining operations to unlocking new
               opportunities, we empower you with cutting-edge solutions so you
               can stay ahead of the competition and lead your market with
               confidence.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+                </p>
+              </div>
+            </div>
+          </section>
 
-   <div className="min-vh-100 py-4 ">
-  <div className="container px-3 " >
-    <div className="position-relative mb-5">
-  <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 1 }}
-  >
-    <div className="d-flex align-items-center position-relative" style={{ width: '100%' }}>
-      
-      <button
-        className={`swiper-button-prev-portfolio ${isBeginning ? 'd-none' : ''}`}
-        style={{
-          width: '45px',
-          height: '45px',
-          borderRadius: '50%',
-          backgroundColor: '#f3f4f6',
-          color: '#6b7280',
-          boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          cursor: 'pointer',
-          border: 'none',
-          outline: 'none',
-          opacity: 0.9,
-          zIndex: 10
-        }}
-        onClick={() => swiperRef.current?.swiper.slidePrev()}
-      >
-        &lt;
-      </button>
-
-      <div style={{ flex: 1, overflow: 'hidden' }}>
-        <Swiper
-          ref={swiperRef}
-          modules={[Navigation]}
-          navigation={{
-            nextEl: '.swiper-button-next-portfolio',
-            prevEl: '.swiper-button-prev-portfolio',
-          }}
-          spaceBetween={16}
-          loop={false}
-          onSlideChange={(swiper) => {
-            setIsBeginning(swiper.isBeginning);
-            setIsEnd(swiper.isEnd);
-          }}
-          watchOverflow={true}
-          centeredSlides={false}
-          breakpoints={{
-            0: { slidesPerView: 1.3 },
-            360: { slidesPerView: 1.5 },
-            480: { slidesPerView: 2 },
-            576: { slidesPerView: 2.3 },
-            768: { slidesPerView: 3 },
-            992: { slidesPerView: 4 },
-            1200: { slidesPerView: 5 },
-          }}
-          style={{ width: '100%', padding: '30px 0' ,backgroundColor:"transparent"}}
-          onInit={(swiper) => {
-            setIsBeginning(swiper.isBeginning);
-            setIsEnd(swiper.isEnd);
-          }}
-        >
-          {services.map((item, index) => (
-            <SwiperSlide
-              key={item.id}
-              style={{
-                maxWidth: '240px',
-                height: 'auto',
-                overflow: 'hidden',
-                border:'none'
-              }}
-            >
-              <motion.button
-                onClick={() => setActiveTab(item.id)}
-                className="d-flex flex-column align-items-center gap-2 p-3 rounded-4 w-100"
-                style={{
-                  backgroundColor: activeTab === item.id ? '#E0A63B' : '#f5f5f5',
-                  color: activeTab === item.id ? 'white' : '#666',
-                  boxShadow: activeTab === item.id
-                    ? '0 4px 20px rgba(0,0,0,0.15)'
-                    : '0 2px 8px rgba(0,0,0,0.08)',
-                  transform: activeTab === item.id ? 'translateY(-2px)' : 'translateY(0)',
-                  transition: '0.3s all',
-                   border:'1px solid transparent'
-                }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
-                whileHover={{ scale: 0.97 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <div
-                  className="d-flex align-items-center justify-content-center rounded-circle mb-2"
-                  style={{
-                    width: '60px',
-                    height: '60px',
-                    fontSize: '1.5rem',
-                    backgroundColor: activeTab === item.id
-                      ? 'rgba(255,255,255,0.2)'
-                      : `${item.color}20`,
-                    color: activeTab === item.id ? 'white' : item.color,
-                    transition: 'all 0.3s'
-                   
-                  }}
-                >
-                  {item.icon}
-                </div>
-                <span className="text-center fw-medium" style={{ fontSize: '1rem' }}>
-                  {item.label}
-                </span>
-              </motion.button>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-
-      <button
-        className={`swiper-button-next-portfolio ${isEnd ? 'd-none' : ''}`}
-        style={{
-          width: '45px',
-          height: '45px',
-          borderRadius: '50%',
-          backgroundColor: '#f3f4f6',
-          color: '#6b7280',
-          boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          cursor: 'pointer',
-          border: 'none',
-          outline: 'none',
-          opacity: 0.9,
-          zIndex: 10
-        }}
-        onClick={() => swiperRef.current?.swiper.slideNext()}
-      >
-        &gt;
-      </button>
-    </div>
-  </motion.div>
-</div>
-
-
-    {activeService && (
-      <motion.div
-        key={activeTab}
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-        className="rounded-4 p-md-1"
-      >
-        <motion.div className="text-center mb-5 mx-auto" style={{ maxWidth: '54rem' }}
+ <div className="portfolio-container">
+      <div className="portfolio-header">
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 1 }}
         >
-          <h2 className=" mb-3 " style={{ fontSize: '2.1rem' }}>
-            {activeService.heading}
-          </h2>
-          <p className="text-secondary" style={{ fontSize: '1.125rem' }}>
-            {activeService.subtext}
-          </p>
+          <div className="swiper-container-wrapper">
+            <button
+              className={`swiper-nav-button prev ${isBeginning ? 'hidden' : ''}`}
+              onClick={() => swiperRef.current?.swiper.slidePrev()}
+            >
+              &lt;
+            </button>
+
+            <div className="swiper-wrapper-container">
+              <Swiper
+                ref={swiperRef}
+                modules={[Navigation]}
+                navigation={{
+                  nextEl: '.swiper-button-next-portfolio',
+                  prevEl: '.swiper-button-prev-portfolio',
+                }}
+                spaceBetween={16}
+                loop={false}
+                onSlideChange={(swiper) => {
+                  setIsBeginning(swiper.isBeginning);
+                  setIsEnd(swiper.isEnd);
+                }}
+                watchOverflow={true}
+                centeredSlides={false}
+                breakpoints={{
+                  0: { slidesPerView: 1.3 },
+                  360: { slidesPerView: 1.5 },
+                  480: { slidesPerView: 2 },
+                  576: { slidesPerView: 2.3 },
+                  768: { slidesPerView: 3 },
+                  992: { slidesPerView: 4 },
+                  1200: { slidesPerView: 5 },
+                }}
+                className="portfolio-swiper"
+                onInit={(swiper) => {
+                  setIsBeginning(swiper.isBeginning);
+                  setIsEnd(swiper.isEnd);
+                }}
+              >
+                {services.map((item, index) => (
+                  <SwiperSlide key={item.id} className="swiper-slide-item">
+                    <motion.button
+                      onClick={() => setActiveTab(item.id)}
+                      className={`service-tab ${activeTab === item.id ? 'active' : ''}`}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: index * 0.05 }}
+                      whileHover={{ scale: 0.97 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <div className={`service-icon ${activeTab === item.id ? 'active' : ''}`}>
+                        {item.icon}
+                      </div>
+                      <span className="service-label">{item.label}</span>
+                    </motion.button>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+
+            <button
+              className={`swiper-nav-button next ${isEnd ? 'hidden' : ''}`}
+              onClick={() => swiperRef.current?.swiper.slideNext()}
+            >
+              &gt;
+            </button>
+          </div>
         </motion.div>
+      </div>
 
-        <div className="container">
-  {activeService.items.map((item, index) => (
-    <motion.div
-      key={index}
-      className="row align-items-center mb-4"
-      initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.6, delay: 0.3 + (index * 0.15) }}
-    >
-      {index % 2 === 0 ? (
-        <>
-          <div className="col-12 col-md-6">
-            <motion.div
-              className="bg-white border rounded-4 p-4 shadow-sm h-100"
-              whileHover={{ y: -4, boxShadow: "0 12px 24px rgba(0,0,0,0.1)" }}
-            >
-              <div className="d-none d-md-flex gap-3">
-                <div
-                  className="d-flex align-items-center justify-content-center rounded-4"
-                  style={{
-                    padding: '15px',
-                    height: '60px',
-                    width: '60px',
-                    fontSize: '1.5rem',
-                    backgroundColor: `${item.color}90`,
-                    color: item.color,
-                  }}
-                >
-                  {item.icon}
-                </div>
-                <div>
-                  <h4 className="mb-2">{item.title}</h4>
-                  <p className="text-secondary mb-0">{item.description}</p>
-                </div>
-              </div>
+      {activeService && (
+        <motion.div
+          key={activeTab}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="service-content"
+        >
+          <motion.div
+            className="service-intro"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <h2 className="case-heading">{activeService.heading}</h2>
+            <p className="case-subtitle mx-auto w-100">{activeService.subtext}</p>
+          </motion.div>
 
-              <div className="d-block d-md-none text-center">
-                <div
-                  className="d-flex align-items-center justify-content-center rounded-4 mx-auto mb-3"
-                  style={{
-                    padding: '15px',
-                    height: '60px',
-                    width: '60px',
-                    fontSize: '1.5rem',
-                    backgroundColor: `${item.color}90`,
-                    color: item.color,
-                  }}
+          <div className="timeline-container">
+            <div className="timeline-content">
+              {activeService.items.map((item, index) => (
+                <motion.div
+                  key={index}
+                  className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 + index * 0.15 }}
                 >
-                  {item.icon}
-                </div>
-                <h5 className="mb-2">{item.title}</h5>
-                <p className="text-secondary">{item.description}</p>
-              </div>
-            </motion.div>
+                  <motion.div
+                    className="timeline-card"
+                    whileHover={{ y: -4 }}
+                  >
+                    <div className="desktop-layout">
+                      <div className="card-icon" style={{ backgroundColor: `${item.color}90`, color: item.color }}>
+                        {item.icon}
+                      </div>
+                      <div className="card-content">
+                        <h4>{item.title}</h4>
+                        <p>{item.description}</p>
+                      </div>
+                    </div>
+
+                    <div className="mobile-layout">
+                      <div className="card-icon" style={{ backgroundColor: `${item.color}90`, color: item.color }}>
+                        {item.icon}
+                      </div>
+                      <h5>{item.title}</h5>
+                      <p>{item.description}</p>
+                    </div>
+                  </motion.div>
+                </motion.div>
+              ))}
+            </div>
           </div>
-
-          <div className="col-12 col-md-6 d-none d-md-block"></div>
-        </>
-      ) : (
-        <>
-          <div className="col-12 col-md-6 d-none d-md-block"></div>
-
-          <div className="col-12 col-md-6">
-            <motion.div
-              className="bg-white border rounded-4 p-4 shadow-sm h-100"
-              whileHover={{ y: -4, boxShadow: "0 12px 24px rgba(0,0,0,0.1)" }}
-            >
-              <div className="d-none d-md-flex gap-3">
-                <div
-                  className="d-flex align-items-center justify-content-center rounded-4"
-                  style={{
-                    padding: '15px',
-                    height: '60px',
-                    width: '60px',
-                    fontSize: '1.5rem',
-                    backgroundColor: `${item.color}90`,
-                    color: item.color,
-                  }}
-                >
-                  {item.icon}
-                </div>
-                <div>
-                  <h4 className="mb-2">{item.title}</h4>
-                  <p className="text-secondary mb-0">{item.description}</p>
-                </div>
-              </div>
-
-              <div className="d-block d-md-none text-center">
-                <div
-                  className="d-flex align-items-center justify-content-center rounded-4 mx-auto mb-3"
-                  style={{
-                    padding: '15px',
-                    height: '60px',
-                    width: '60px',
-                    fontSize: '1.5rem',
-                    backgroundColor: `${item.color}90`,
-                    color: item.color,
-                  }}
-                >
-                  {item.icon}
-                </div>
-                <h5 className="mb-2">{item.title}</h5>
-                <p className="text-secondary">{item.description}</p>
-              </div>
-            </motion.div>
-          </div>
-        </>
+        </motion.div>
       )}
-    </motion.div>
-  ))}
-</div>
-      </motion.div>
-    )}
-  </div>
-</div>
+    </div>
+
 
       <PortFolioSection />
       <Blogslider />

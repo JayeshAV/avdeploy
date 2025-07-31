@@ -1,0 +1,279 @@
+.portfolio-container {
+  min-height: 100vh;
+  max-width: 1400px;
+  margin: auto;
+  padding: 1rem 0;
+
+  .portfolio-header {
+    margin-bottom: 3rem;
+    position: relative;
+
+    .swiper-container-wrapper {
+      display: flex;
+      align-items: center;
+      position: relative;
+      width: 100%;
+
+      .swiper-nav-button {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: #f3f4f6;
+        color: #6b7280;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        opacity: 0.9;
+        z-index: 10;
+        position: relative;
+
+        &.hidden {
+          display: none;
+        }
+
+        &.prev {
+          margin-right: 1rem;
+        }
+
+        &.next {
+          margin-left: 1rem;
+        }
+      }
+
+      .swiper-wrapper-container {
+        flex: 1;
+        overflow: hidden;
+
+        .portfolio-swiper {
+          width: 100%;
+          padding: 2rem 0;
+          background-color: transparent;
+
+          .swiper-slide-item {
+           .swiper-slide-item {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 240px;
+  margin: 0 7px; // 14px total horizontal gap between slides
+}
+
+
+            .service-tab {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 0.5rem;
+              padding: 1rem;
+              border-radius: 1rem;
+              width: 100%;
+              background-color: #f5f5f5;
+              color: #666;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+              border: 1px solid transparent;
+              transition: all 0.3s;
+              cursor: pointer;
+
+              &.active {
+                background-color: #E0A63B;
+                color: white;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+                transform: translateY(-2px);
+              }
+
+              .service-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                margin-bottom: 0.5rem;
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+                background-color: rgba(0, 0, 0, 0.05);
+                color: inherit;
+                transition: all 0.3s;
+
+                &.active {
+                  background-color: rgba(255, 255, 255, 0.2);
+                  color: white;
+                }
+              }
+
+              .service-label {
+                text-align: center;
+                font-weight: 500;
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .service-content {
+    border-radius: 1rem;
+    padding: 40px 0;
+
+    .service-intro {
+      text-align: center;
+      margin-bottom: 3rem;
+      max-width: 54rem;
+      margin-left: auto;
+      margin-right: auto;
+
+      h2 {
+        margin-bottom: 1rem;
+        font-size: 2.1rem;
+      }
+
+      p {
+        color: #6b7280;
+        font-size: 1.125rem;
+      }
+    }
+
+    .timeline-container {
+      width: 100%;
+
+      .timeline-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 0.75rem;
+        width: 100%;
+
+        .timeline-item {
+          width: 100%;
+          margin: 0;
+          display: flex;
+          justify-content: center;
+
+          &.left {
+            justify-content: flex-start;
+          }
+
+          &.right {
+            justify-content: flex-end;
+          }
+
+          .timeline-card {
+            background-color: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 1rem;
+            margin: 5px;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            transition: box-shadow 0.3s;
+            width: 50%;
+
+            &:hover {
+              box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            }
+
+            .desktop-layout {
+              display: none;
+              gap: 0.75rem;
+
+              .card-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 1rem;
+                padding: 0.75rem;
+                height: 60px;
+                width: 60px;
+                font-size: 1.5rem;
+              }
+
+              .card-content {
+                h4 {
+                  margin-bottom: 0.5rem;
+                }
+
+                p {
+                  color: #6b7280;
+                  margin-bottom: 0;
+                }
+              }
+            }
+
+            .mobile-layout {
+              display: block;
+              text-align: center;
+
+              .card-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 1rem;
+                padding: 0.75rem;
+                height: 60px;
+                width: 60px;
+                font-size: 1.5rem;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 0.75rem;
+              }
+
+              h5 {
+                margin-bottom: 0.5rem;
+              }
+
+              p {
+                color: #6b7280;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive styles
+@media (min-width: 768px) {
+  .portfolio-container {
+    .service-content {
+      .timeline-container {
+        .timeline-content {
+          .timeline-item {
+            width: 100%;
+            max-width: 1400px;
+
+            .timeline-card {
+              width: calc(50% - 1rem);
+
+              .desktop-layout {
+                display: flex;
+              }
+
+              .mobile-layout {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .portfolio-container {
+    .service-content {
+      .timeline-container {
+        .timeline-content {
+          .timeline-item {
+            .timeline-card {
+              width: 100%; // 👈 Full width for mobile
+            }
+          }
+        }
+      }
+    }
+  }
+}

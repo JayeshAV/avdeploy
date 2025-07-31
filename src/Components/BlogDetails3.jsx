@@ -72,13 +72,16 @@ const BlogDetails3 = () => {
 
   return (
     <>
-    <section class="section-hero section-blog-hero" style={sectionStyle}>
-        <div class="container mw-1000px d-flex flex-column gap-3 gap-md-5">
-            <div class="d-flex flex-column">
-                <h1 class="text-center">Unlocking Growth: How IT Solutions Empower Small and Medium Businesses</h1>
-            </div>
-        </div>
-    </section> 
+  
+          <section
+                className="section-hero"
+            >
+                <div className="hero-container">
+                    <div className="hero-content">
+                        <h2>Unlocking Growth: How IT Solutions Empower Small and Medium Businesses</h2>
+                    </div>
+                </div>
+            </section>
 
   <section class="section section-blog-content" >
     <div class="container mw-1000px d-flex flex-column gap-4 gap-md-5">
@@ -143,10 +146,10 @@ const BlogDetails3 = () => {
 </section>
 
 
-
-
+<section style={{marginBottom:"120px"}}>
           <BlogSlider/>
 
+</section>
     
     </>
 

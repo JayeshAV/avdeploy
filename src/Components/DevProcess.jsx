@@ -55,58 +55,43 @@ const DevProcess = () => {
   }]
 
   return (
- <section className="dev-process-section py-5" >
-  <div className="container">
-    <h2 className="text-center mb-3 display-6"  style={{fontSize: '39px'}}> How We Work ?</h2>
-      <motion.p 
-           className="text-20 text-center mb-0 text-gray"
-           style={{color:'gray'}}
-           variants={{once:true,amount:0.3}}
-         >
-           <b>Our Proven Process for Success</b>
-         </motion.p>
-    <div className="timeline">
-      {steps.map((step, index) => (
-        <motion.div
-          key={index}
-          className={`timeline-box ${index % 2 === 0 ? 'left' : 'right'} `}
-          initial={{ opacity: 0, y  : 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: index * 0.15 }}
+ <section className="dev-process-section py-5">
+      <div className="container" style={{ width: "1400px" }}>
+        <h2 className="text-center mb-3 heading-top">Our Development Process</h2>
+        <motion.p
+          className="text-center mb-0 sub-titles-text"
+          
+          style={{ color: '#666',paddingBottom:"30px",fontSize:"1.2rem" }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <div className="timeline-card bg-white shadow">
-            <div
-              className="timeline-icon mb-3"
-              style={{
-                color: step.color,fontSize:"25px"
-              }}
+          Our Proven Process for Success
+        </motion.p>
+
+        <div className="timeline">
+          {steps.map((step, index) => (
+            <motion.div
+              key={index}
+              className={`timeline-box ${index % 2 === 0 ? 'left' : 'right'}`}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+              viewport={{ once: true, amount: 0.3 }}
             >
-              {step.icon}
-            </div>
-            <h2 className=" mb-2 " style={{fontSize:'28px'}}>{step.title}</h2>
-            <p className="text-muted small">{step.desc}</p>
-            {step.hasButton && (
-              <Link
-                to="/contact"
-                className="btn btn-sm mt-2"
-                style={{
-                  color: 'white',
-                  fontWeight: '500',
-                  borderRadius: '20px',
-                  padding: '6px 18px',fontSize:'10px',
-                  backgroundColor:'#e0a63b'
-                }}
-              >
-                Let’s Build Together
-              </Link>
-            )}
-          </div>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</section>
+              <div className="timeline-card bg-white shadow">
+               
+                <h2 className="mb-2" style={{ fontSize: '22px',fontFamily: 'Montserrat, sans-serif',fontWeight:"600" }}>{step.title}</h2>
+                <p className="text-muted small" style={{fontFamily: 'Montserrat, sans-serif'}}>{step.desc}</p>
+                {step.hasButton && (
+                  <Link to="/contact" className="btn contact-btn">
+                    Let’s Build Together
+                  </Link>
+                )}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
 )};
 
 export default DevProcess;

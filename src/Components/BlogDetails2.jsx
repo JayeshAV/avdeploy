@@ -10,6 +10,7 @@ import blog1 from '../assets/images/blog-img-1.jpg';
 import blog2 from '../assets/images/blog-img-2.jpg';
 import blog3 from '../assets/images/blog-img-3.jpg';
 import { Link } from 'react-router-dom';
+import BlogSlider from './Blogslider';
 
 
 const BlogDetails2 = () => {
@@ -54,13 +55,16 @@ const BlogDetails2 = () => {
 
   return (
     <>
-     <section class="section-hero section-blog-hero" style={sectionStyle}>
-        <div class="container mw-1000px d-flex flex-column gap-3 gap-md-5">
-            <div class="d-flex flex-column">
-                <h1 class="text-center">Unlocking Growth: How IT Solutions Empower Small and Medium Businesses</h1>
-            </div>
-        </div>
-    </section> 
+ 
+       <section
+                className="section-hero"
+            >
+                <div className="hero-container">
+                    <div className="hero-content">
+                        <h2>Unlocking Growth: How IT Solutions Empower Small and Medium Businesses</h2>
+                    </div>
+                </div>
+            </section>
 
 <section class="section section-blog-content" >
     <div class="container mw-1000px d-flex flex-column gap-4 gap-md-5">
@@ -305,53 +309,9 @@ const BlogDetails2 = () => {
     </div>
 </section>  
    
-   <section className="section section-home section-blog bg-gray pb-15">
-  <div className="container d-flex flex-column gap-4">
-    <h2 className="mb-2    ts-0 text-center"  style={{fontSize: '35px'}}>Related Topics</h2>
-
-    <div className="position-relative">
-      <Swiper
-        modules={[Navigation]}
-        navigation={{
-          nextEl: '.swiper-button-next-2',
-          prevEl: '.swiper-button-prev-2',
-        }}
-        spaceBetween={20}
-        slidesPerView={1}
-        breakpoints={{
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-        }}
-      >
-        {blogs.concat(blogs).map((blog, index) => (
-          <SwiperSlide key={index} className="p-2 d-flex h-100">
-            <Link
-              to={blog.link}
-              className="blog-item border bg-white d-flex flex-column p-3 w-100 h-100"
-              style={{ minHeight: "100%", height: "100%" }}
-            >
-              <div className="image-wrapper mb-2">
-                <img
-                  src={blog.img}
-                  alt={blog.title}
-                  className="img-fluid w-100"
-                  style={{ height: "200px", objectFit: "cover", borderRadius: "8px" }}
-                />
-              </div>
-              <div className="d-flex flex-column justify-content-between flex-grow-1">
-                <h5 className="mb-2 mt-2 text-truncate">{blog.title}</h5>
-                <p className="text-muted mb-0 text-truncate-3">{blog.desc}</p>
-              </div>
-            </Link>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <div className="swiper-button-prev swiper-button-prev-2"></div>
-      <div className="swiper-button-next swiper-button-next-2"></div>
-    </div>
-  </div>
-</section>
+ <section style={{marginBottom:"120px"}}>
+    <BlogSlider />
+ </section>
     </>
   )
 }

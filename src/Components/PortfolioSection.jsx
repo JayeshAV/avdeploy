@@ -5,10 +5,10 @@
 // import 'swiper/css/navigation';
 // import { Link } from 'react-router-dom';
 
-import projectImg1 from '../assets/images/project-img-1.jpg';
-import projectImg2 from '../assets/images/project-img-2.jpg';
-import projectImg3 from '../assets/images/project-img-3.jpg';
-import projectImg4 from '../assets/images/project-img-4.jpg';
+import projectImg1 from "../assets/images/project-img-1.jpg";
+import projectImg2 from "../assets/images/project-img-2.jpg";
+import projectImg3 from "../assets/images/project-img-3.jpg";
+import projectImg4 from "../assets/images/project-img-4.jpg";
 
 // // 🔁 Portfolio Data
 // const portfolioItems = [
@@ -54,8 +54,6 @@ import projectImg4 from '../assets/images/project-img-4.jpg';
 //   const [isBeginning, setIsBeginning] = useState(true);
 //   const [isEnd, setIsEnd] = useState(false);
 //   const swiperRef = useRef(null);
-
-
 
 //   useEffect(() => {
 //     const swiper = swiperRef.current?.swiper;
@@ -118,10 +116,10 @@ import projectImg4 from '../assets/images/project-img-4.jpg';
 //       src={item.image}
 //       alt={`Project ${index + 1}`}
 //       className="object-fit-cover"
-//       style={{ 
+//       style={{
 //         height: '390px',  // increased from 250px
 //         width: '100%',    // ensure full width
-//         borderRadius: '10px' 
+//         borderRadius: '10px'
 //       }}
 //     />
 //     <div className="d-flex flex-column gap-1">
@@ -182,7 +180,6 @@ import projectImg4 from '../assets/images/project-img-4.jpg';
 //   <i className="bi bi-chevron-right" style={{ color: 'white', fontSize: '1.5rem' }}></i>
 // </div>
 
-
 //         </div>
 
 //         <div className="d-flex justify-content-center mb-5 pb-5">
@@ -204,7 +201,6 @@ import projectImg4 from '../assets/images/project-img-4.jpg';
 // import "swiper/css";
 // import "swiper/css/navigation";
 // import "swiper/css/pagination";
-
 
 // const bestWorkData = [
 //   {
@@ -297,182 +293,273 @@ import projectImg4 from '../assets/images/project-img-4.jpg';
 
 // export default PortfolioSection;
 
-
-
-import { Container, Row, Col, Carousel, Button } from 'react-bootstrap';
+import { Container, Row, Col, Carousel, Button } from "react-bootstrap";
 
 // import projectImg1 from './path-to-your-image1.jpg'; // Update with your actual image path
 // import projectImg2 from './path-to-your-image2.jpg'; // Update with your actual image path
 // import projectImg3 from './path-to-your-image3.jpg'; // Update with your actual image path
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectFade, Navigation, Pagination } from "swiper/modules";
 import 'swiper/css';
-import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Link } from 'react-router-dom';
+import 'swiper/css/pagination';
+
+import { Link } from "react-router-dom";
 import headerbg from "../assets/images/header-bg.jpg";
+import { useEffect, useRef } from "react";
 
 const PortFolioSection = () => {
+
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      // Manually update swiper to bind custom buttons
+      swiperRef.current.swiper.params.navigation.prevEl = '.custom-swiper-prev';
+      swiperRef.current.swiper.params.navigation.nextEl = '.custom-swiper-next';
+      swiperRef.current.swiper.navigation.init();
+      swiperRef.current.swiper.navigation.update();
+    }
+  }, []);
+
+
   const projects = [
     {
       id: 1,
-      number: '01',
-      title: 'Leonardo247',
-      description: 'A platform designed to streamline maintenance. ',
+      number: "01",
+      title: "Leonardo247",
+      description: "A platform designed to streamline maintenance. ",
       features: [
-        'Built backend using Python, Django.',
-        'Integrated SBA APIs with 3rd-party services.'
+        "Built backend using Python, Django.",
+        "Integrated SBA APIs with 3rd-party services.",
       ],
       image: projectImg1,
-      path: "/portfolio-details-1"
+      path: "/portfolio-details-1",
     },
     {
       id: 2,
-      number: '02',
-      title: 'footmetrics.io',
-      description: 'Tech solution involving React, Python, Django, Flask, JS.',
+      number: "02",
+      title: "footmetrics.io",
+      description: "Tech solution involving React, Python, Django, Flask, JS.",
       features: [
-        'Launched Footmetrics.io web platform.',
-        'Enabled hardware configuration analytics.'
+        "Launched Footmetrics.io web platform.",
+        "Enabled hardware configuration analytics.",
       ],
       image: projectImg2,
-      path: "/portfolio-details-2"
+      path: "/portfolio-details-4",
     },
     {
       id: 3,
-      number: '03',
-      title: 'HomeDoctor',
-      description: 'Helps users select appliances using AI-based suggestions.',
+      number: "03",
+      title: "HomeDoctor",
+      description: "Helps users select appliances using AI-based suggestions.",
       features: [
-        'Dynamic questionnaire for tailored product picks.',
-        'Built-in expert advice system.'
+        "Dynamic questionnaire for tailored product picks.",
+        "Built-in expert advice system.",
       ],
       image: projectImg3,
-      path: "/portfolio-details-3"
+      path: "/portfolio-details-2",
     },
     {
       id: 4,
-      number: '04',
-      title: 'mightydigits.com',
-      description: 'Accounting automation & macro-based finance solutions.',
+      number: "04",
+      title: "mightydigits.com",
+      description: "Accounting automation & macro-based finance solutions.",
       features: [
-        'Client gave 5⭐ for advanced finance tools.',
-        'Automated Excel macros + calculations.'
+        "Client gave 5⭐ for advanced finance tools.",
+        "Automated Excel macros + calculations.",
       ],
       image: projectImg4,
-      path: "/portfolio-details-4"
-    }
+      path: "/portfolio-details-3",
+    },
   ];
   const sectionStyle = {
     background: `linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${headerbg})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    padding: '120px 0'
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    paddingTop: "80px",
+    marginTop:"80px",
+    paddingBottom:"20px"
   };
 
-
   return (
+    <>
+    <style>{`
+        .swiper-pagination {
+          opacity:0;
+        }
+      `}</style>
 
 
-    <section className="mb-5" style={sectionStyle}>
-      <h2 className="text-center text-white mb-5 display-6" style={{ fontSize: '45px' }}>
-        Portfolio
-      </h2>
 
-      <Container className="position-relative">
+       <section style={sectionStyle} >
+         <section >
+  <h2 className="case-heading text-center text-white">
+    Case Studies that showcase our expertise.
+  </h2>
+  <p className="case-subtitle text-center mx-auto text-white">
+    Our Projects that reflect our skills, proven methods, and technical excellence.
+  </p>
+</section>
+<Container className="position-relative" style={{ position: "relative",paddingBottom:"60px" }}>
+ <Swiper
+          ref={swiperRef}
+          modules={[Navigation, Pagination]}
+          spaceBetween={30}
+          slidesPerView={1}
+          loop={true}
+          speed={1500}
+          pagination={{ clickable: true }}
+        >
+    {projects.map((project) => (
+      <SwiperSlide key={project.id}>
         <div
           style={{
-            position: 'absolute',
-            top: '25px',
-            left: '-5px',
-            width: '74%',
-            height: '84%',
-            backgroundColor: '#FFFFFF',
-            borderRadius: '15px',
+            position: "absolute",
+            bottom: "0px",
+            left: "-10px",
+            width: "76%",
+            height: "95%",
+            backgroundColor: "#FFFFFF",
+            borderRadius: "14px",
+            marginLeft: "30px",
             zIndex: 0,
-            display: 'none',
           }}
-          className="d-none d-md-block shadow"
+          className="shadow d-none d-md-block"
         ></div>
-
-        <Swiper
-          modules={[Navigation]}
-          spaceBetween={30}
-          pagination={{ clickable: true }}
-          navigation={{
-            nextEl: '.custom-swiper-next',
-            prevEl: '.custom-swiper-prev',
+        
+        <Row
+          className="align-items-center position-relative g-4 p-3 p-md-5 shadow bg-white mx-2 mx-md-0"
+          style={{
+            borderRadius: "14px",
+            zIndex: 1,
+            marginBottom: "30px",
+            minHeight: "540px",
+            width: "auto",
+            marginTop: "0px",
+            marginLeft: "0px",
           }}
         >
-          {projects.map((project) => (
-            <SwiperSlide key={project.id}>
-              <Row
-                className="align-items-center position-relative g-4 p-4 p-md-5 shadow bg-white"
+          {/* Content Column - First on mobile, left on desktop */}
+          <Col xs={12} md={7} className="order-1 order-md-1">
+            <h5 className="fw-bold" style={{ color: "#E0902C" }}>
+              {project.number}
+            </h5>
+            <h3 className="fw-bold mb-3" style={{ color: "#E0902C" }}>
+              {project.title}
+            </h3>
+            <p className="mb-4">{project.description}</p>
+            <ul className="ps-4 mb-4">
+              {project.features.map((feature, index) => (
+                <li key={index} className="mb-2">
+                  {feature}
+                </li>
+              ))}
+            </ul>
+            
+            <div className="d-flex flex-wrap gap-2">
+              <Link
+                to={project.path}
                 style={{
-                  borderRadius: '25px',
-                  zIndex: 1,
-                  marginBottom: '30px',
-                  height:"540px"
+                  textDecoration: "none",
+                  background: "white",
+                  padding: "8px 20px",
+                  borderRadius: "25px",
+                  border: "1px solid #ccc",
+                  color: "#444",
+                  fontWeight: 500,
                 }}
               >
-                <Col xs={12} md={7}>
-                  <h5 className="fw-bold" style={{ color: '#E0902C' }}>{project.number}</h5>
-                  <h3 className="fw-bold mb-3" style={{ color: '#E0902C' }}>{project.title}</h3>
-                  <p className="mb-4">{project.description}</p>
-                  <ul className="ps-4 mb-4">
-                    {project.features.map((feature, index) => (
-                      <li key={index} className="mb-2">{feature}</li>
-                    ))}
-                  </ul>
-
-                  <div className="d-flex flex-wrap gap-2">
-                    <Link
-                      to={project.path}
-                      style={{
-                        textDecoration: 'none',
-                        background: 'white',
-                        padding: '8px 20px',
-                        borderRadius: '25px',
-                        border: '1px solid #ccc',
-                        color: '#444',
-                        fontWeight: 500,
-                      }}
-                    >
-                      View More
-                    </Link>
+                View More
+              </Link>
+            </div>
+            
+                  <div className="d-flex justify-content-start mt-4 mt-md-5">
+                    <button className="custom-swiper-prev btn rounded-circle shadow-sm px-3 py-2" style={{ color: "#226AB3" }}>
+                      ❮
+                    </button>
+                    <button className="custom-swiper-next btn rounded-circle shadow-sm px-3 py-2 ms-2" style={{ color: "#226AB3" }}>
+                      ❯
+                    </button>
                   </div>
-                </Col>
+          </Col>
+          
+          {/* Image Column - Second on mobile, right on desktop */}
+          <Col xs={12} md={5} className="order-2 order-md-2 mt-3 mt-md-0">
+  <div
+  className="w-100 h-100 d-flex img-fluid align-items-center justify-content-center custom-padding"
+  style={{ position: "relative", minHeight: "250px" }}
+>
 
-                <Col xs={12} md={5} className="mt-3 mt-md-0">
-                  <div className="w-100 h-100 d-flex align-items-center justify-content-center">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-100 rounded-3 object-fit-cover"
-                      style={{ maxHeight: '400px' }}
-                    />
-                  </div>
-                </Col>
-              </Row>
-            </SwiperSlide>
-          ))}
-        </Swiper>
 
-        <div className="d-flex justify-content-center mt-5">
-          <button className="custom-swiper-prev btn btn-light rounded-circle shadow-sm px-3 py-2">
-            ❮
-          </button>
-          <button className="custom-swiper-next btn btn-light rounded-circle shadow-sm px-3 py-2 ms-2">
-            ❯
-          </button>
-        </div>
-      </Container>
-    </section>
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-100 rounded-3 object-fit-cover responsive-img"
+                style={{ 
+                  height: "auto"
+                }}
+              />
+            </div>
+          </Col>
+         
+        </Row>
+        
+      </SwiperSlide>
+    ))}
+    
+  </Swiper>
+  
+ 
+</Container>
+</section>
+
+<style jsx>{`
+  @media (max-width: 767.98px) {
+    .swiper-slide {
+      padding: 0 10px;
+    }
+    
+    .custom-swiper-prev,
+    .custom-swiper-next {
+      padding: 10px 12px !important;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 575.98px) {
+    .swiper-slide {
+      padding: 0 5px;
+    }
+    
+    .row {
+      margin-left: 10px !important;
+      margin-right: 10px !important;
+      width: calc(100% - 20px) !important;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .row {
+      width: 78% !important;
+      margin-left: 40px !important;
+    }
+    
+    .col-md-5 > div {
+      position: absolute !important;
+      top: 0% !important;
+      left: 50% !important;
+      padding: 130px !important;
+    }
+      
+    }
+  }
+`}</style>
+
+    </>
   );
 };
-
-
 
 export default PortFolioSection;

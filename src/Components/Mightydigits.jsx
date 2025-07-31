@@ -19,16 +19,22 @@ const Mightydigits = () => {
 
   return (
     <>
-      <section className="section-hero" style={sectionStyle}>
-        <div className="container container-800px d-flex flex-column gap-3 gap-md-5">
-          <div className="d-flex flex-column">
-            <h1 className="text-center">mightydigits.com</h1>
-            <p className="text-22 text-white text-center">
-              Accounting and finance project
-            </p>
-          </div>
-        </div>
-      </section>
+ 
+
+                <section
+  className="section-hero"
+>
+  <div className="hero-container">
+    <div className="hero-content">
+      <h2>mightydigits.com</h2>
+      <p>
+           Accounting and finance project.
+      </p>
+    </div>
+  </div>
+</section>
+
+      
 
       <section className="section py-md-5">
         <div className="container bg-gray d-flex flex-column gap-4 gap-md-5 br-32 p-4 p-md-5">
@@ -83,7 +89,10 @@ const Mightydigits = () => {
         </div>
       </section>
 
+   <section className="mb-5 pb-5">
       <PortfolioSection />
+   </section>
+
     </>
   );
 };

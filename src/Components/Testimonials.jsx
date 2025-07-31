@@ -11,9 +11,9 @@ import { Link } from 'react-router-dom';
 const Testimonials = () => {
   const styles = {
     section: {
-      padding: '80px 0',
+      marginTop:"80px" ,
       backgroundColor: '#f8f9fa',
-      fontFamily: "'Inter', sans-serif"
+fontFamily: 'Montserrat, sans-serif' 
     },
     statsNumber: {
       fontSize: '4rem',
@@ -151,7 +151,13 @@ const testimonials = [
 
   
  
-          <h2 style={{fontSize:'38px'}}>What Our Client Says</h2>
+          <h2 className='case-heading'>Whats <span style={{color:"#FFC107"}}> Our Valuable Clients</span> Say About Us</h2>
+        <p 
+           className=" text-center mb-0  sub-titles-text case-subtitle w-100"
+          
+         >
+   We appreciate our clients' trust and take pride in exceeding expectations. See their feedback
+         </p>   
         </div>
 
         <div className="testimonials-container">

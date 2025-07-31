@@ -18,16 +18,18 @@ const Leonardo = () => {
 
   return (
     <>
-      <section className="section-hero" style={sectionStyle}>
-        <div className="container container-800px d-flex flex-column gap-3 gap-md-5">
-          <div className="d-flex flex-column">
-            <h1 className="text-center">Leonardo247</h1>
-            <p className="text-22 text-white text-center">
-              A platform designed to streamline maintenance and operation workflows for property owners and operators
-            </p>
-          </div>
-        </div>
-      </section>
+          <section
+  className="section-hero"
+>
+  <div className="hero-container">
+    <div className="hero-content">
+      <h2>Leonardo247</h2>
+      <p>
+         A platform designed to streamline maintenance and operation workflows for property owners and operators.
+      </p>
+    </div>
+  </div>
+</section>
 
       <section className="section py-md-5">
         <div className="container bg-gray d-flex flex-column gap-4 gap-md-5 br-32 p-4 p-md-5">
@@ -80,8 +82,8 @@ const Leonardo = () => {
           </div>
         </div>
       </section>
-
-      <PortfolioSection />
+<section className='pb-5 mb-5'>
+      <PortfolioSection /></section>
     </>
   );
 };

@@ -8,8 +8,8 @@
   --white: #FFFFFF;
   --bs-body-color: #000000;
 
-  --bs-body-font-family: 'Arimo';
-  --title-fonts: 'Bricolage Grotesque';
+  --bs-body-font-family: 'Montserrat', sans-serif;
+  --title-fonts: 'Montserrat', sans-serif;
 }
 /* 
 src/index.css or App.css */
@@ -919,13 +919,13 @@ div.map {
 }
 .service-card .para {
   color: #6B6B6B;
-  font-family: 'Arimo';
+  font-family: 'Montserrat', sans-serif;
   margin: 0%;
 }
 
 .service-card:hover .para {
   color:white;
-  font-family: 'Arimo';
+  font-family: 'Montserrat', sans-serif;
   margin: 0%;
 }
 

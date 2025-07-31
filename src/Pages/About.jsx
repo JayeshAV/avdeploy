@@ -30,12 +30,12 @@ const fadeRight = {
 };
 
 const About = () => {
-  const sectionStyle = {
-    background: `linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${headerbg})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat'
-  };
+  // const sectionStyle = {
+  //   background: `linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${headerbg})`,
+  //   backgroundSize: 'cover',
+  //   backgroundPosition: 'center',
+  //   backgroundRepeat: 'no-repeat'
+  // };
 
   const values = [
   {
@@ -74,24 +74,24 @@ const About = () => {
   return (
     <>
      
-      <motion.section
-        className="section-hero"
-        style={sectionStyle}
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      >
-        <div className="container d-flex flex-column gap-3 gap-md-5">
-          <div className="d-flex flex-column">
-            <h1 className="text-center">Innovate. Optimize. Grow. <br />Giving your Business a Digital Edge</h1>
-            <p className="text-22 text-white text-center">
-              Our team of skilled IT specialists combines innovation with technical expertise to deliver customized, future-ready solutions.
-              From cloud services to app development and IT consulting, we empower businesses with the latest technology for efficiency and success.
-            </p>
-          </div>
-        </div>
-      </motion.section>
+    <motion.section
+  className="section-hero"
+  variants={fadeUp}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+>
+  <div className="hero-container">
+    <div className="hero-content">
+      <h2>Innovate. Optimize. Grow. <br />Giving your Business a Digital Edge</h2>
+      <p>
+        Our team of skilled IT specialists combines innovation with technical expertise to deliver customized, future-ready solutions.
+        From cloud services to app development and IT consulting, we empower businesses with the latest technology for efficiency and success.
+      </p>
+    </div>
+  </div>
+</motion.section>
+
 
       <motion.section
         className="section section-home"
@@ -120,7 +120,7 @@ const About = () => {
                 thrive in the digital age. With a team of experienced professionals, we specialize in providing cutting-edge software development,
                 cloud computing, and IT consulting services tailored to meet the unique needs of our clients.
               </p>
-              <Link to="/contact" className='btn btn-primary icon-arrow-w m-auto m-sm-0'>Contact Us</Link>
+              <Link to="/contact" className='yellow-cta cta icon-arrow-w m-auto m-sm-0'>Contact Us</Link>
             </motion.div>
           </div>
         </div>
@@ -136,7 +136,7 @@ const About = () => {
         <div className="container mw-800px d-flex flex-column gap-4 gap-md-5">
           <motion.div className="d-flex flex-column mb-5" variants={fadeUp}>
             <h2 className="text-center    ts-0" >Our Mission</h2>
-            <p className="text-22 text-center">
+            <p className=" text-center m-auto case-subtitle">
               We empower businesses with reliable, scalable, and cost-effective IT solutions that drive growth, enhance security,
               and improve operational efficiency. Our mission is to bridge the gap between technology and business success through
               innovative strategies and world-class expertise.
@@ -145,7 +145,7 @@ const About = () => {
 
           <motion.div className="d-flex flex-column mb-2" variants={fadeUp}>
             <h2 className="text-center    ts-0">Our Values</h2>
-            <p className="text-22 text-center">
+            <p className=" text-center m-auto case-subtitle">
               At Avatara Technobiz, our core values define who we are and guide every decision we make. We are committed to delivering
               exceptional IT solutions with integrity, innovation, and customer focus.
             </p>

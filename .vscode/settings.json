@@ -1,0 +1,17 @@
+{
+    "files.autoSave": "afterDelay",
+    "liveSassCompile.settings.compileOnWatch": true,
+    "liveSassCompile.settings.rootIsWorkspace": true,
+    "liveSassCompile.settings.watchOnLaunch": true,
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.fullReload": true,
+    "liveServer.settings.NoBrowser": true,
+    "liveServer.settings.useWebExt": true,
+    "liveServer.settings.useLocalIp": true,
+    "markdown.occurrencesHighlight.enabled": false,
+    "markdown.preview.breaks": true,
+    "markdown.validate.enabled": false,
+    "mediaPreview.video.autoPlay": false
+}

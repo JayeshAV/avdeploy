@@ -20,66 +20,107 @@ const Footmetrics = () => {
 
   return (
     <>
-  
-      <section className="section-hero" style={sectionStyle}>
-        <div className="container container-800px d-flex flex-column gap-3 gap-md-5">
-          <div className="d-flex flex-column">
-            <h1 className="text-center">footmetrics.io</h1>
-            <p className="text-22 text-white text-center">
-               The solution for the Footmetics.io project involved utilizing a wide range of technologies.
+      <section className="section-hero" >
+        <div className="hero-container">
+          <div className="hero-content">
+            <h2>footmetrics.io</h2>
+            <p>
+              The solution for the Footmetics.io project involved utilizing a wide range of technologies.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="section py-md-5 py-4 px-3">
-        <div className="container d-flex flex-column gap-5">
-
-          <div className="row align-items-center g-4">
-            <div className="col-12 col-md-6">
-              <img src={footmetricsImg} alt="Footmetrics" className="img-fluid rounded shadow w-100 h-25" />
-            </div>
-            <div className="col-12 col-md-6">
-              <h3>Project Solution:</h3>
-              <p>
-                The solution for the Footmetics.io project involved utilizing a wide range of technologies, such as React, Python, Django, Flask, JavaScript, Microservices, AWS, Google Cloud Platform, BitBucket, Postman, Swagger, Redis, Celery, GitHub, GitLab, IoT, Data Science, Machine Learning, PostgreSQL, Selenium, Cloud, and CI/CD.
-              </p>
-              <p>
-                My contributions included launching the Footmetics.io website, writing automated jobs to detect camera status, creating APIs, implementing ML algorithms, and improving platform performance by converting monolithic to microservices. These efforts led to significant growth and expansion to top brands across cities and globally.
-              </p>
-            </div>
+  <section className="section py-5 " style={{ maxWidth: '1400px', margin: '0 auto' }}>
+  <div className="container-fluid px-0">
+    {/* First Row - Project Solution */}
+    <div className=" align-items-center g-5 mb-5" style={{display:'flex',justifyContent:"space-between",alignItems:"center",flexWrap:"wrap"}}>
+      <div className="col-12 col-lg-6">
+        <img 
+          src={footmetricsImg} 
+          alt="Footmetrics" 
+          className="img-fluid rounded-4 shadow-sm w-100" 
+          style={{ maxHeight: '500px', objectFit: 'cover' }}
+        />
+      </div>
+      <div className="col-12 col-lg-6 ps-lg-5">
+        <h2 className="h1 fw-bold  mb-4" style={{color:"#2265ab"}}>Project Solution</h2>
+        <div className="fs-5 text-muted" style={{ lineHeight: '1.6' }}>
+          <p className="mb-4">
+            The solution for the Footmetics.io project leveraged cutting-edge technologies including:
+          </p>
+          <div className="d-flex flex-wrap gap-2 mb-4">
+            <span className="badge bg-primary bg-opacity-10 fs-6 fw-normal p-2" style={{color:"#2265ab"}}>React</span>
+            <span className="badge bg-primary bg-opacity-10 fs-6 fw-normal p-2" style={{color:"#2265ab"}}>Python</span>
+            <span className="badge bg-primary bg-opacity-10 fs-6 fw-normal p-2" style={{color:"#2265ab"}}>Django</span>
+            <span className="badge bg-primary bg-opacity-10 fs-6 fw-normal p-2" style={{color:"#2265ab"}}>AWS</span>
+            <span className="badge bg-primary bg-opacity-10 fs-6 fw-normal p-2" style={{color:"#2265ab"}}>Microservices</span>
+            <span className="badge bg-primary bg-opacity-10 fs-6 fw-normal p-2" style={{color:"#2265ab"}}>Machine Learning</span>
+            <span className="badge bg-primary bg-opacity-10 fs-6 fw-normal p-2" style={{color:"#2265ab"}}>PostgreSQL</span>
+            <span className="badge bg-primary bg-opacity-10 fs-6 fw-normal p-2" style={{color:"#2265ab"}}>CI/CD</span>
           </div>
+          <p>
+            My contributions included launching the platform, developing automated monitoring systems, creating APIs, implementing ML algorithms, and architecting the transition from monolithic to microservices - driving significant business growth and global expansion.
+          </p>
+        </div>
+      </div>
+    </div>
 
-          <div className="row align-items-center g-4">
-            <div className="col-12 col-md-6 order-2 order-md-1">
-              <h3>Responsibilities:</h3>
-              <ul className="ps-3">
-                <li>Launched the Footmetics.io website and MVP for internal product.</li>
-                <li>Wrote automated jobs to detect camera status, alarms, and downtime.</li>
-                <li>Improved and created multiple data retrieval APIs.</li>
-                <li>Implemented ML algorithms for sales forecasting and ghost count removal.</li>
-                <li>Created dashboards mapping router footfall with camera data.</li>
-                <li>Converted monolithic to microservices architecture.</li>
-                <li>Designed pipelines for file storage in AWS S3 and retrieval via DataLake.</li>
-                <li>Handled bug fixes and overall performance improvements.</li>
-              </ul>
-            </div>
-            <div className="col-12 col-md-6 order-1 order-md-2">
-              <img src={dImg} alt="Dashboard" className="img-fluid rounded shadow w-100" />
-            </div>
-          </div>
+    {/* Second Row - Responsibilities */}
+    <div className="align-items-center g-5 mb-5" style={{display:'flex',justifyContent:"space-between",alignItems:"center",flexWrap:"wrap"}}>
+      <div className="col-12 col-lg-6 order-lg-2">
+        <img 
+          src={dImg} 
+          alt="Dashboard" 
+          className="img-fluid rounded-4 shadow-lg w-100" 
+          style={{ maxHeight: '500px', objectFit: 'cover' }}
+        />
+      </div>
+      <div className="col-12 col-lg-6 order-lg-1 pe-lg-5">
+        <h2 className="h1 fw-bold mb-4" style={{color:"#2265ab"}}>Responsibilities</h2>
+        <ul className="list-unstyled fs-5" style={{ lineHeight: '1.8' }}>
+          <li className="mb-3 d-flex align-items-start">
+            <span className="badge bg-success bg-opacity-10 text-success rounded-circle p-2 me-3 mt-1">✓</span>
+            <span>Launched the Footmetics.io website and MVP for internal product</span>
+          </li>
+          <li className="mb-3 d-flex align-items-start">
+            <span className="badge bg-success bg-opacity-10 text-success rounded-circle p-2 me-3 mt-1">✓</span>
+            <span>Developed automated monitoring for camera status, alarms, and downtime</span>
+          </li>
+          <li className="mb-3 d-flex align-items-start">
+            <span className="badge bg-success bg-opacity-10 text-success rounded-circle p-2 me-3 mt-1">✓</span>
+            <span>Created optimized data retrieval APIs and ML algorithms for sales forecasting</span>
+          </li>
+          <li className="mb-3 d-flex align-items-start">
+            <span className="badge bg-success bg-opacity-10 text-success rounded-circle p-2 me-3 mt-1">✓</span>
+            <span>Architected migration from monolithic to microservices</span>
+          </li>
+          <li className="mb-3 d-flex align-items-start">
+            <span className="badge bg-success bg-opacity-10 text-success rounded-circle p-2 me-3 mt-1">✓</span>
+            <span>Designed AWS S3 pipelines and DataLake integration</span>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-          <div className="bg-light rounded p-4 p-md-5 shadow">
-            <h3 className="text-center mb-3">Achievements:</h3>
-            <p>
-              Grew the product from a few customers to onboarding top brands across Indian cities, Middle East, and Europe. Developed features like automated job systems, data APIs, pipelines for storage/retrieval, and migrated to microservices — enabling scalability and rapid growth.
+    {/* Achievements Card */}
+    <div className="bg-light rounded-4 p-5 shadow-lg mb-5">
+      <div className="d-flex justify-content-center">
+        <div className="col-12 col-lg-10 text-center">
+          <h2 className="text-center  case-heading  mb-4" style={{color:"#2265ab",textAlign:"center"}}>Key Achievements</h2>
+          <div className="fs-5 text-muted" >
+            <p className="mb-4 ">
+              Transformed the product from a small customer base to serving top brands across India, Middle East, and Europe. Engineered core systems including automated job processing, scalable data APIs, and cloud storage pipelines - enabling 10x growth in platform usage.
             </p>
             <p>
-              My work made it easier to configure hardware and get retail footfall insights through powerful, scalable backend and ML systems.
+              My technical leadership in the microservices migration and ML implementation provided the foundation for rapid international expansion and powerful retail analytics capabilities.
             </p>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section className="section pb-md-5 pb-4">
         <div className="container">

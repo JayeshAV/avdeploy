@@ -204,21 +204,22 @@ const staggerContainer = {
     return (
       <>
       <div>
+    
+
         <motion.section
       className="section-hero"
-      style={sectionStyle}
+      variants={fadeUp}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      variants={fadeUp}
     >
-      <div className="container mw-800px d-flex flex-column gap-3 gap-md-5">
-        <motion.div className="d-flex flex-column" variants={fadeUp}>
-          <h1 className="text-center">Join Our Team</h1>
-          <p className="text-20 text-white text-center">
-            Be a part of something meaningful. We build, learn, and grow together 🚀
+      <div className="hero-container">
+        <div className="hero-content">
+          <h2>Join Our Team</h2>
+          <p>
+           Be a part of something meaningful. We build, learn, and grow together 
           </p>
-        </motion.div>
+        </div>
       </div>
     </motion.section>
 
@@ -236,7 +237,7 @@ const staggerContainer = {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-6">
-                <h1 style={{ fontSize: '3.5rem', fontWeight: '500', marginBottom: '1.5rem' }}>
+                <h1  className="case-heading">
                   Build Your Career <span style={{ color: '#e0a63b' }}>With Us</span>
                 </h1>
                 <p style={{ fontSize: '1.25rem', opacity: '0.9', marginBottom: '2rem',color:'gray' }}>
@@ -268,6 +269,8 @@ const staggerContainer = {
           </div>
         </section>
 
+        {/* Open Positions */}
+           {/* 🧠 Open Positions with animation */}
       <motion.section
         id="open-positions"
         initial="hidden"
@@ -277,16 +280,11 @@ const staggerContainer = {
         style={{ padding: '2rem 0' }}
       >
         <div className="container">
-          <motion.div className="text-center mb-5" variants={fadeUp}>
-            <h2 style={{
-              fontSize: '3.5rem',
-              fontWeight: '500',
-              marginBottom: '1rem',
-              fontFamily: "Bricolage Grotesque"
-            }}>
+          <motion.div className="text-center mb-5 " variants={fadeUp}>
+            <h2 className="case-heading">
               Open Positions
             </h2>
-            <p style={{ color: '#64748b', fontSize: '1.1rem' }}>
+            <p className="case-subtitle m-auto">
               We're looking for talented individuals to join our growing team
             </p>
           </motion.div>
@@ -389,6 +387,7 @@ const staggerContainer = {
       </motion.section>
         </section>
 
+        {/* Benefits Section */}
        <section style={{ padding: '6rem 0', backgroundColor: 'white' }}>
         <div className="container">
           <div className="text-center mb-5">
@@ -396,7 +395,7 @@ const staggerContainer = {
               initial={{ opacity: 0, y: -30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              style={{ fontSize: '3.5rem', fontWeight: '500', marginBottom: '1rem' }}
+                className="case-heading"
             >
               Why Join Our Team?
             </motion.h2>
@@ -404,7 +403,7 @@ const staggerContainer = {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              style={{ color: '#64748b', fontSize: '1.1rem', maxWidth: '700px', margin: '0 auto' }}
+              className="case-subtitle m-auto"
             >
               We're committed to creating an environment where our team can thrive both professionally and personally.
             </motion.p>
@@ -447,14 +446,286 @@ const staggerContainer = {
         </div>
       </section>
 
-      <motion.section
+   <motion.section
         id="apply-now"
         style={{ backgroundColor: '#f8f9fa', padding: '5rem 0' }}
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-8">
+              <motion.div
+                className="text-center mb-5"
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <h2 className="case-heading">
+                  Ready to <span style={{ color: '#e0a63b' }}>Join Us?</span>
+                </h2>
+                <p className="case-subtitle mx-auto">
+                  Take the first step towards an exciting career. Fill out the form below and let's start a conversation.
+                </p>
+              </motion.div>
+
+              <motion.div
+                style={{
+                  backgroundColor: 'white',
+                  borderRadius: '20px',
+                  padding: '3rem',
+                  boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
+                  border: '1px solid rgba(0,0,0,0.05)'
+                }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <form onSubmit={formik.handleSubmit}>
+                  <div className="row g-4">
+                    {/* Name Field */}
+                    <div className="col-md-6">
+                      <label style={labelStyle}>
+                        Full Name <span style={{ color: '#dc3545' }}>*</span>
+                      </label>
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Enter your full name"
+                        style={inputStyle(formik.touched.name && formik.errors.name)}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.name}
+                      />
+                      {formik.touched.name && formik.errors.name && (
+                        <ErrorText msg={formik.errors.name} />
+                      )}
+                    </div>
+
+                    {/* Email Field */}
+                    <div className="col-md-6">
+                      <label style={labelStyle}>
+                        Email Address <span style={{ color: '#dc3545' }}>*</span>
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        style={inputStyle(formik.touched.email && formik.errors.email)}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.email}
+                      />
+                      {formik.touched.email && formik.errors.email && (
+                        <ErrorText msg={formik.errors.email} />
+                      )}
+                    </div>
+
+                    {/* Phone Field */}
+                    <div className="col-md-6">
+                      <label style={labelStyle}>
+                        Phone Number <span style={{ color: '#dc3545' }}>*</span>
+                      </label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        style={inputStyle(formik.touched.phone && formik.errors.phone)}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.phone}
+                      />
+                      {formik.touched.phone && formik.errors.phone && (
+                        <ErrorText msg={formik.errors.phone} />
+                      )}
+                    </div>
+
+                    {/* Job Role Field */}
+                    <div className="col-md-6">
+                      <label style={labelStyle}>
+                        Position Applying For <span style={{ color: '#dc3545' }}>*</span>
+                      </label>
+                      <select
+                        name="job"
+                        style={inputStyle(formik.touched.job && formik.errors.job)}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.job}
+                      >
+                        <option value="">Select a position</option>
+                        {jobRoles.map((job, index) => (
+                          <option key={index} value={job.title}>
+                            {job.title} - {job.location} ({job.type})
+                          </option>
+                        ))}
+                      </select>
+                      {formik.touched.job && formik.errors.job && (
+                        <ErrorText msg={formik.errors.job} />
+                      )}
+                    </div>
+
+                    {/* Resume Upload Field */}
+                    <div className="col-12">
+                      <label style={labelStyle}>
+                        Resume/CV <span style={{ color: '#dc3545' }}>*</span>
+                      </label>
+                      <div style={{
+                        border: formik.touched.resume && formik.errors.resume ? '2px dashed #dc3545' : '2px dashed #e0a63b',
+                        borderRadius: '12px',
+                        padding: '2rem',
+                        textAlign: 'center',
+                        backgroundColor: '#fefefe',
+                        transition: 'all 0.3s ease'
+                      }}>
+                        <input
+                          type="file"
+                          name="resume"
+                          accept=".pdf,.doc,.docx"
+                          style={{ display: 'none' }}
+                          id="resume-upload"
+                          onChange={(event) => {
+                            const file = event.currentTarget.files[0];
+                            setFile(file);
+                            formik.setFieldValue('resume', file);
+                          }}
+                          onBlur={formik.handleBlur}
+                        />
+                        <label
+                          htmlFor="resume-upload"
+                          style={{
+                            cursor: 'pointer',
+                            display: 'block',
+                            width: '100%'
+                          }}
+                        >
+                          <div style={{
+                            width: '60px',
+                            height: '60px',
+                            backgroundColor: 'rgba(224, 166, 59, 0.1)',
+                            borderRadius: '50%',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            margin: '0 auto 1rem auto'
+                          }}>
+                            <i className="bi bi-cloud-upload" style={{ fontSize: '1.5rem', color: '#e0a63b' }}></i>
+                          </div>
+                          
+                          {file ? (
+                            <div>
+                              <p style={{ color: '#e0a63b', fontWeight: '600', marginBottom: '0.5rem' }}>
+                                File Selected: {file.name}
+                              </p>
+                              <p style={{ color: '#64748b', fontSize: '0.9rem', margin: '0' }}>
+                                Click to change file
+                              </p>
+                            </div>
+                          ) : (
+                            <div>
+                              <p style={{ color: '#1e293b', fontWeight: '600', marginBottom: '0.5rem' }}>
+                                Click to upload your resume
+                              </p>
+                              <p style={{ color: '#64748b', fontSize: '0.9rem', margin: '0' }}>
+                                PDF, DOC, or DOCX files only (Max 5MB)
+                              </p>
+                            </div>
+                          )}
+                        </label>
+                      </div>
+                      {formik.touched.resume && formik.errors.resume && (
+                        <ErrorText msg={formik.errors.resume} />
+                      )}
+                    </div>
+
+                    {/* Submit Button */}
+                    <div className="col-12">
+                      <motion.button
+                        type="submit"
+                        disabled={formik.isSubmitting}
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        style={{
+                          backgroundColor: '#e0a63b',
+                          color: 'white',
+                          border: 'none',
+                          borderRadius: '50px',
+                          padding: '1rem 3rem',
+                          fontSize: '1.1rem',
+                          fontWeight: '600',
+                          width: '100%',
+                          cursor: formik.isSubmitting ? 'not-allowed' : 'pointer',
+                          opacity: formik.isSubmitting ? 0.7 : 1,
+                          boxShadow: '0 4px 15px rgba(224, 166, 59, 0.3)',
+                          transition: 'all 0.3s ease'
+                        }}
+                      >
+                        {formik.isSubmitting ? (
+                          <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
+                            <div style={{
+                              width: '20px',
+                              height: '20px',
+                              border: '2px solid rgba(255,255,255,0.3)',
+                              borderTop: '2px solid white',
+                              borderRadius: '50%',
+                              animation: 'spin 1s linear infinite'
+                            }}></div>
+                            Submitting Application...
+                          </span>
+                        ) : (
+                          <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
+                            Submit Application
+                            <i className="bi bi-arrow-right"></i>
+                          </span>
+                        )}
+                      </motion.button>
+                    </div>
+                  </div>
+                </form>
+
+                {/* Additional Info */}
+                <div style={{
+                  marginTop: '2rem',
+                  padding: '1.5rem',
+                  backgroundColor: '#f8f9fa',
+                  borderRadius: '12px',
+                  border: '1px solid rgba(224, 166, 59, 0.2)'
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
+                    <div style={{
+                      width: '40px',
+                      height: '40px',
+                      backgroundColor: 'rgba(224, 166, 59, 0.1)',
+                      borderRadius: '50%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexShrink: '0'
+                    }}>
+                      <i className="bi bi-info-circle" style={{ color: '#e0a63b' }}></i>
+                    </div>
+                    <div>
+                      <h5 style={{ color: '#1e293b', marginBottom: '0.5rem', fontWeight: '600' }}>
+                        What happens next?
+                      </h5>
+                      <p style={{ color: '#64748b', margin: '0', fontSize: '0.95rem' }}>
+                        Our HR team will review your application within 2-3 business days. If your profile matches our requirements, we'll reach out to schedule an initial conversation. We appreciate your interest in joining our team!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+
+        {/* Add CSS for spinner animation */}
+        <style jsx>{`
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+        `}</style>
       </motion.section>
 
       <section style={{ padding: '2rem 0' }}>
@@ -466,7 +737,7 @@ const staggerContainer = {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 style={{ fontSize: '2.5rem', fontWeight: '700', color: '#1e293b', marginBottom: '1.5rem' }}>
+              <h2 className="case-heading">
                 Our <span style={{ color: '#e0a63b' }}>Culture</span>
               </h2>
               <p style={{ color: '#64748b', marginBottom: '2rem', fontSize: '1.1rem' }}>
@@ -508,7 +779,7 @@ const staggerContainer = {
       </div>
       </div>
 
-      <TechSection />
+          <TechSection />
       </>
     );
   };

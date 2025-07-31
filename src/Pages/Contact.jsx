@@ -64,28 +64,25 @@ const Contact = () => {
 
   return (
     <>
-      <section className="section-hero m-0" style={sectionStyle}>
-        <div className="container mw-800px d-flex flex-column gap-3 gap-md-5">
-          <motion.div
-            className="d-flex flex-column"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+         <section
+            className="section-hero"
           >
-            <h1 className="text-center">Contact Us</h1>
-            <p className="text-20 text-white text-center">
-              Get answer to your questions about our sales, services, and support.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+            <div className="hero-container">
+              <div className="hero-content">
+                <h2>Contact Us</h2>
+                <p>
+                 Get answer to your questions about our sales, services, and support.
+                </p>
+              </div>
+            </div>
+          </section>
+          
 
-      <section className=' container' style={{ overflowX: 'hidden' }}>
-        <Container style={{ 
-          padding: '40px 15px', 
+      <section className=' container m-0 p-0 mx-auto bg-transparent' style={{ overflowX: 'hidden' }}>
+        <Container className='m-0 p-0' style={{ 
           fontFamily: "'Poppins', sans-serif",
-          maxWidth: '100%'
+          width: '1400px',
+          boxShadow:"none"
         }}>
           <Row className="mb-5 text-center">
             <Col>
@@ -94,7 +91,7 @@ const Contact = () => {
             </Col>
           </Row>
 
-          <Row className="g-4 mb-5">
+          <Row className="g-4 mb-5" style={{backgroundColor:"none", boxShadow:"none"}}>
             {/* India Office */}
             <Col xs={12} md={6}>
               <Card style={{ 
@@ -283,17 +280,7 @@ const Contact = () => {
 
                   <Button 
                     type="submit"
-                    style={{ 
-                      border: 'none',
-                      borderRadius: '10px',
-                      fontWeight: '500',
-                      width: '100%',
-                      maxWidth: '300px',
-                      display:'block',
-                      margin: '0 auto',
-                      fontSize: '0.9rem',
-                      padding: '0px'
-                    }}
+                    className='yellow-cta d-block mx-auto'
                     disabled={formik.isSubmitting}
                   >
                     {formik.isSubmitting ? 'Submitting...' : 'Submit Message'}

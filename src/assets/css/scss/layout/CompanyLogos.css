@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/* 🌐 Base styles - Mobile First */
+.brands-section {
+  padding: 40px 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.brands-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70px;
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 8px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.brands-logo img {
+  max-height: 40px;
+  width: auto;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.brands-logo:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+/* 📱 Tablets - min-width 768px */
+@media (min-width: 768px) {
+  .brands-logo {
+    height: 80px;
+    padding: 10px;
+  }
+  .brands-logo img {
+    max-height: 45px;
+  }
+}
+/* 💻 Small Laptops - min-width 1024px */
+@media (min-width: 1024px) {
+  .brands-logo {
+    height: 90px;
+  }
+  .brands-logo img {
+    max-height: 50px;
+  }
+}
+/* 🖥️ Large Screens - min-width 1280px */
+@media (min-width: 1280px) {
+  .brands-logo {
+    height: 100px;
+  }
+  .brands-logo img {
+    max-height: 55px;
+  }
+}/*# sourceMappingURL=CompanyLogos.css.map */

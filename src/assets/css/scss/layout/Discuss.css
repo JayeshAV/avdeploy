@@ -1,0 +1,118 @@
+/* Base styles - Mobile First */
+.avia-section {
+  background-color: #ffc107;
+  padding: 30px 30px;
+  margin-top: 80px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  padding: 0 10px;
+}
+
+/* Responsive container width */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+.section-heading h2 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .section-heading h2 {
+    font-size: 2.4rem;
+  }
+}
+@media (min-width: 1024px) {
+  .section-heading h2 {
+    font-size: 2.8rem;
+  }
+}
+.sub-heading p {
+  font-size: 1.2rem;
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+}
+
+@media (min-width: 768px) {
+  .sub-heading p {
+    font-size: 1.2rem;
+    max-width: 80%;
+  }
+}
+@media (min-width: 1024px) {
+  .sub-heading p {
+    max-width: 80%;
+  }
+}
+.hr-invisible {
+  height: 30px;
+}
+
+.avia-button-wrap {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.avia-button {
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* Black CTA Button Style */
+.black-cta {
+  background-color: black;
+  color: white;
+  padding: 8px 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+.black-cta:hover {
+  background-color: #222;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+/* Optional spacing for button icon if needed */
+.avia_button_icon {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  margin-left: 8px;
+}/*# sourceMappingURL=Discuss.css.map */
