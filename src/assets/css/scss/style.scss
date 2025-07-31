@@ -163,6 +163,35 @@ font-family: 'Montserrat', sans-serif;
 //   }
 // }
 
+.footer-cta {
+  width: 80%;
+  max-width: 80%;
+  margin: 0 auto;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; // 👉 vertically center karta hai
+  align-items: center;      // 👉 horizontally center karta hai
+  text-align: center;
+  padding: 2rem;
+
+  background: #FFC107;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-width: 768px) {
+    max-width: 80%;
+  }
+}
+
+@media (max-width:768px) {
+  .footer-cta {
+    margin-top: -80px;
+  }
+}
+
+
 
 .yellow-cta {
   background-color: #FFC107;

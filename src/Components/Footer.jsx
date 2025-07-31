@@ -28,26 +28,19 @@ const Footer = () => {
       className="footer bg-gray pt-lg-3"
       style={sectionStyle}
     >
-      <div className="container d-flex flex-column gap-lg-0 gap-4">
-        <div
-          className="footer-cta bordered-box p-md-5 d-flex flex-column align-items-center gap-3 text-center"
-          style={{
-            background: '#FFC107',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-            
-          }}
-        >
-          <h2 className="text-white case-subtitle mb-0 p-0" >
-            <span style={{fontSize:"25px"}}>Get a Free IT Assessment Today!</span>
-          </h2>
-      <div className="avia-button-wrap m-0 p-0 ">
-            <CommonButton to="/contact" className=" mb-1 cta black-cta">
-              SCHEDULE A CALL
-            </CommonButton>
-          </div>
-        </div>
-      </div>
+  <div className="container">
+  <div className="footer-cta">
+    <h2 className="text-white case-subtitle m-0 p-0">
+      <span style={{ fontSize: '20px' }}>Get a Free IT Assessment Today!</span>
+    </h2>
+    <div className="avia-button-wrap">
+      <CommonButton to="/contact" className="cta black-cta">
+        SCHEDULE A CALL
+      </CommonButton>
+    </div>
+  </div>
+</div>
+
       < footer className="footer bg-light pt-5"  style={{width:"100%",margin:"0%",padding:"0%"}}>
 
           <style>
