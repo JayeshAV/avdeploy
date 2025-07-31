@@ -28,7 +28,7 @@ const Footer = () => {
       className="footer bg-gray pt-lg-3"
       style={sectionStyle}
     >
-  <div className="container">
+  <div className="container footer-main">
   <div className="footer-cta">
     <h2 className="text-white case-subtitle m-0 p-0">
       <span style={{ fontSize: '20px' }}>Get a Free IT Assessment Today!</span>

@@ -425,7 +425,7 @@ const Contact = () => {
 
       <section className="section section-home contact-cta p-0 pb-5">
         <motion.div
-          className="container"
+          className="container mb-5"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.7 }}

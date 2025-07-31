@@ -3,41 +3,208 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectCoverflow } from "swiper/modules";
 import "swiper/css"; // ✅ required
 // ❌ remove this: import "swiper/css/autoplay"; (no such file)
+import oppo from "../assets/images/oppo.png"
+import lnt from "../assets/images/lnt.png"
+import weighrot from  "../assets/images/weil.png"
+import tata from  "../assets/images/tata.png"
+
+
 
 
 const brandLogos = [
   {
-    img: "https://www.bigscal.com/wp-content/uploads/2023/03/bs-client-Walmart.webp",
-    alt: "hubfleet",
+    img: oppo,
+    alt: "oppo",
   },
   {
-    img: "https://www.bigscal.com/wp-content/uploads/2023/03/bs-client-BigInterview.webp",
-    alt: "awakenedmind",
+    img: lnt,
+    alt: "L&T",
   },
   {
-    img: "https://www.bigscal.com/wp-content/uploads/2023/03/bs-client-OpenCosmos.webp",
-    alt: "growcurriculum",
+    img: weighrot,
+    alt: "weichert",
   },
   {
-    img: "https://www.bigscal.com/wp-content/uploads/2024/10/sbi-pantion-funds.webp",
-    alt: "quicksolveplus",
+    img: tata,
+    alt: "TATA",
+  },
+    {
+    img: oppo,
+    alt: "oppo",
   },
   {
-    img: "https://www.bigscal.com/wp-content/uploads/2023/03/bs-client-one-RPM.webp",
-    alt: "cami-app",
+    img: lnt,
+    alt: "L&T",
   },
-   {
-    img: "https://www.bigscal.com/wp-content/uploads/2023/03/bs-client-one-RPM.webp",
-    alt: "cami-app",
+  {
+    img: weighrot,
+    alt: "weichert",
   },
-   {
-    img: "https://www.bigscal.com/wp-content/uploads/2023/03/bs-client-one-RPM.webp",
-    alt: "cami-app",
+  {
+    img: tata,
+    alt: "TATA",
   },
-   {
-    img: "https://www.bigscal.com/wp-content/uploads/2023/03/bs-client-one-RPM.webp",
-    alt: "cami-app",
+    {
+    img: oppo,
+    alt: "oppo",
   },
+  {
+    img: lnt,
+    alt: "L&T",
+  },
+  {
+    img: weighrot,
+    alt: "weichert",
+  },
+  {
+    img: tata,
+    alt: "TATA",
+  },
+    {
+    img: oppo,
+    alt: "oppo",
+  },
+  {
+    img: lnt,
+    alt: "L&T",
+  },
+  {
+    img: weighrot,
+    alt: "weichert",
+  },
+  {
+    img: tata,
+    alt: "TATA",
+  },
+  {
+    img: oppo,
+    alt: "oppo",
+  },
+  {
+    img: lnt,
+    alt: "L&T",
+  },
+  {
+    img: weighrot,
+    alt: "weichert",
+  },
+  {
+    img: tata,
+    alt: "TATA",
+  },
+    {
+    img: oppo,
+    alt: "oppo",
+  },
+  {
+    img: lnt,
+    alt: "L&T",
+  },
+  {
+    img: weighrot,
+    alt: "weichert",
+  },
+  {
+    img: tata,
+    alt: "TATA",
+  },
+    {
+    img: oppo,
+    alt: "oppo",
+  },
+  {
+    img: lnt,
+    alt: "L&T",
+  },
+  {
+    img: weighrot,
+    alt: "weichert",
+  },
+  {
+    img: tata,
+    alt: "TATA",
+  },
+    {
+    img: oppo,
+    alt: "oppo",
+  },
+  {
+    img: lnt,
+    alt: "L&T",
+  },
+  {
+    img: weighrot,
+    alt: "weichert",
+  },
+  {
+    img: tata,
+    alt: "TATA",
+  },
+  {
+    img: oppo,
+    alt: "oppo",
+  },
+  {
+    img: lnt,
+    alt: "L&T",
+  },
+  {
+    img: weighrot,
+    alt: "weichert",
+  },
+  {
+    img: tata,
+    alt: "TATA",
+  },
+    {
+    img: oppo,
+    alt: "oppo",
+  },
+  {
+    img: lnt,
+    alt: "L&T",
+  },
+  {
+    img: weighrot,
+    alt: "weichert",
+  },
+  {
+    img: tata,
+    alt: "TATA",
+  },
+    {
+    img: oppo,
+    alt: "oppo",
+  },
+  {
+    img: lnt,
+    alt: "L&T",
+  },
+  {
+    img: weighrot,
+    alt: "weichert",
+  },
+  {
+    img: tata,
+    alt: "TATA",
+  },
+    {
+    img: oppo,
+    alt: "oppo",
+  },
+  {
+    img: lnt,
+    alt: "L&T",
+  },
+  {
+    img: weighrot,
+    alt: "weichert",
+  },
+  {
+    img: tata,
+    alt: "TATA",
+  },
+
 ];
 
 const CompanyLogos = () => {
@@ -48,7 +215,7 @@ const CompanyLogos = () => {
   slidesPerView={2}
   spaceBetween={20}
   loop={true}
-  speed={800}
+  speed={900}
   autoplay={{
     delay: 1200,
     disableOnInteraction: false,

@@ -12,13 +12,13 @@ const TopRatedCompany = () => {
   "Agile Transformation",
   "Cloud-Driven Strategy"
 ];
-
+  
  const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % headlines.length);
-    }, 2500);
+    }, 4000);
 
     return () => clearInterval(timer);
   }, []);
