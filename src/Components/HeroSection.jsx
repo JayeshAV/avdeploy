@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from "framer-motion";
+import bgimage from "../assets/images/hero.webp"
 
 const TopRatedCompany = () => {
 
@@ -22,9 +23,13 @@ const TopRatedCompany = () => {
   }, []);
 
   return (
-    <section
-      className="hero-section"
-    >
+  <section
+  className="hero-section"
+  style={{
+    backgroundImage: `linear-gradient(to right, #383838 0%, rgba(255, 255, 255, 0) 100%), url(${bgimage})`
+  }}
+>
+
       <div className="container">
         <div className="hero-left">
            <div className="headline-wrapper">

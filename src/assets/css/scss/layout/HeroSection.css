@@ -1,6 +1,4 @@
 .hero-section {
-  background-image: -webkit-gradient(linear, left top, right top, from(#383838), to(rgba(255, 255, 255, 0))), url(./public/hero.webp);
-  background-image: linear-gradient(to right, #383838 0%, rgba(255, 255, 255, 0) 100%), url(./public/hero.webp);
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
