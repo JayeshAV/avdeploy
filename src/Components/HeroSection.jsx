@@ -12,6 +12,7 @@ const TopRatedCompany = () => {
   "Agile Transformation",
   "Cloud-Driven Strategy"
 ];
+
  const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -54,9 +55,6 @@ const TopRatedCompany = () => {
   <br />
   <span style={{color:"white"}}>with a Leading Software Company</span>
 </h1>
-
-
-     
           <p>
            We are a future-focused software company delivering intelligent, scalable, and secure solutions that grow with your vision. From concept to launch, we turn ideas into high-performance technology that drives real business impact.
           </p>

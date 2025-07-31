@@ -49,6 +49,7 @@ const TechSection = () => {
     };
 
   return (
+
     <section className="section section-home  bg-content " style={sectionStyle}>
       <div className="d-flex flex-column gap-4 " style={{ padding: '60px 0' }}>
         <div className="mw-800px d-flex flex-column align-items-center px-4 gap-2 m-auto">
@@ -61,6 +62,7 @@ const TechSection = () => {
         </div>
 
         <div className="home-logo-slider d-flex gap-2 align-items-center">
+          
           <Swiper
             modules={[Autoplay]}
             autoplay={{
@@ -70,7 +72,6 @@ const TechSection = () => {
             speed={1000}
             slidesPerView={true}
             slidesPerGroup={true}
-
             breakpoints={{
               0: { slidesPerView: 2 },
               576: { slidesPerView: 3 },
@@ -86,7 +87,7 @@ const TechSection = () => {
     maxHeight: '70px',
     objectFit: 'contain',
     margin: 'auto',
-    marginBottom:"80px"
+    marginBottom:"140px"
   }}/>
               </SwiperSlide>
             ))}

@@ -81,18 +81,49 @@ const Navbar = () => {
                   </Link>
                 </li>
               ))}
-              <li
-                className={`dropdown ${companyDropdownOpen ? "open" : ""}`}
-                onClick={() => setCompanyDropdownOpen(!companyDropdownOpen)}
-              >
-                <span className={["/about", "/career"].includes(currentPath) ? "active" : ""}>
-                  Company <i className={`fa-solid fa-chevron-down`}></i>
-                </span>
-                <div className="dropdown-content">
-                  <Link to="/about" onClick={() => setMobileMenuOpen(false)}>About Us</Link>
-                  <Link to="/career" onClick={() => setMobileMenuOpen(false)}>Careers</Link>
-                </div>
-              </li>
+            <li
+  className={`dropdown ${companyDropdownOpen ? "open" : ""}`}
+  onClick={() => {
+    if (isMobile) {
+      setCompanyDropdownOpen(!companyDropdownOpen);
+    }
+  }}
+  onMouseEnter={() => {
+    if (!isMobile) {
+      setCompanyDropdownOpen(true);
+    }
+  }}
+  onMouseLeave={() => {
+    if (!isMobile) {
+      setCompanyDropdownOpen(false);
+    }
+  }}
+>
+  <span className={["/about", "/career"].includes(currentPath) ? "active" : ""}>
+    Company <i className="fa-solid fa-chevron-down"></i>
+  </span>
+  <div className="dropdown-content">
+    <Link
+      to="/about"
+      onClick={() => {
+        setMobileMenuOpen(false);
+        setCompanyDropdownOpen(false);
+      }}
+    >
+      About Us
+    </Link>
+    <Link
+      to="/career"
+      onClick={() => {
+        setMobileMenuOpen(false);
+        setCompanyDropdownOpen(false);
+      }}
+    >
+      Careers
+    </Link>
+  </div>
+</li>
+
                 <li className="cta gradient-border" id="box">
                  <CommonButton
   to="/contact"

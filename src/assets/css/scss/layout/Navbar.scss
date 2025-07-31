@@ -121,15 +121,14 @@ $font: "Montserrat", sans-serif;
       }
     }
 
-    // ✅ Hover support
     &:hover .dropdown-content {
       display: flex;
     }
 
-    // ✅ Click support (via JS class)
-    &.open .dropdown-content {
-      display: flex;
-    }
+   &.open .dropdown-content {
+  display: flex;
+}
+
   }
   &.cta a {
     border: 1px solid $HighlightColor  ;
@@ -170,68 +169,7 @@ $font: "Montserrat", sans-serif;
   }
 
 
-  
 
-// @keyframes borderAnimation {
-//   0% {
-//     background-position: 0% 50%;
-//   }
-//   50% {
-//     background-position: 100% 50%;
-//   }
-//   100% {
-//     background-position: 0% 50%;
-//   }
-// }
-
-// .cta {
-//   position: relative;
-//   display: inline-block;
-//   border-radius: 8px;
-//   overflow: hidden;
-
-//   /* Gradient border layer */
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     background: linear-gradient(270deg, #ff0080, #7928ca, #2af598, #00f0ff);
-//     background-size: 500%;
-//     animation: borderAnimation 5s ease infinite;
-//     border-radius: 4px;
-//     z-index: -1;
-
-//     -webkit-mask:
-//       linear-gradient(#fff 0 0) content-box,
-//       linear-gradient(#fff 0 0);
-//     -webkit-mask-composite: xor;
-//     mask-composite: exclude;
-//   }
-
-//   a {
-//     position: relative;
-//     z-index: 1;
-//     display: inline-block;
-//     border: 1px solid $HighlightColor;
-//     color: $BlueColor;
-//     padding: 15px 20px;
-//     border-radius: 4px;
-//     font-weight: 500;
-//     text-decoration: none;
-
-//     &:hover {
-//       background-color: darken(#ffc107, 10%);
-//       color: white;
-//     }
-//   }
-// }
-
-
-
-  /* ====== Tablet (≥768px) ====== */
   @media (min-width: 768px) {
     .nav-wrapper {
       padding: 0 24px;
