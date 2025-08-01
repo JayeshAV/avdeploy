@@ -139,7 +139,7 @@ const services = [
     heading: "IT Consulting Services",
     subtext: "We provide expert IT consulting services tailored to help small and medium businesses leverage technology for growth, efficiency, and security. Whether you're looking to optimize your IT infrastructure, enhance cybersecurity, or adopt cloud solutions, our experienced consultants guide you every step of the way.",
     items: [
-      { icon: "📊", title: "IT Strategy & Planning", description: "Align your IT investments with your business goals for long-term success.", color: "#ffc107" },
+      { icon: "📊", title: "IT Strategy & Planning", description: "Align your IT investments with your business goals for long-term success.", color: "#e0a63b" },
       { icon: "☁️", title: "Cloud Consulting", description: "Guidance on cloud adoption, migration, and cost optimization using AWS and other cloud platforms.", color: "#E0A63B" },
       { icon: "🛡️", title: "Cybersecurity Consulting", description: "Assess risks, implement security best practices, and ensure compliance with industry standards.", color: "#E0A63B" },
       { icon: "🔌", title: "Infrastructure Optimization", description: "Improve performance and reliability of your IT systems, whether on-premise or in the cloud.", color: "#E0A63B" },
@@ -213,25 +213,52 @@ const WebsiteDev = () => {
       setIsEnd(swiper.isEnd);
     }
   };
+
+    const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};  
+
+
+  
   return (
     <>
-              <section
-            className="section-hero"
-          >
-            <div className="hero-container">
-              <div className="hero-content">
-                <h2>We Drive Innovation, <br />
-              You Lead the Market.</h2>
-                <p className="w-100">
-                   At Avatara Technobiz, we harness the power of technology to fuel
+            <motion.section
+                      className="section-hero"
+                      style={sectionStyle}
+                      variants={fadeUp}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                    >
+                      <div className="container" style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 20px' }}>
+                        <div className="hero-content text-center text-white">
+                          <motion.h2 
+                            className="display-4 fw-bold mb-3"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.2 }}
+                          >
+                         We Drive Innovation, <br />
+              You Lead the Market.
+                          </motion.h2>
+                          <motion.p
+                            className="fs-5 mx-auto"
+                            style={{ maxWidth: '600px' }}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.4 }}
+                          >
+                         At Avatara Technobiz, we harness the power of technology to fuel
               business innovation. From streamlining operations to unlocking new
               opportunities, we empower you with cutting-edge solutions so you
               can stay ahead of the competition and lead your market with
               confidence.
-                </p>
-              </div>
-            </div>
-          </section>
+                          </motion.p>
+                        </div>
+                      </div>
+                    </motion.section>
+          
 
  <div className="portfolio-container">
       <div className="portfolio-header">
@@ -265,12 +292,12 @@ const WebsiteDev = () => {
                 watchOverflow={true}
                 centeredSlides={false}
                 breakpoints={{
-                  0: { slidesPerView: 1.3 },
-                  360: { slidesPerView: 1.5 },
+                  0: { slidesPerView: 1 },
+                  360: { slidesPerView: 1 },
                   480: { slidesPerView: 2 },
-                  576: { slidesPerView: 2.3 },
-                  768: { slidesPerView: 3 },
-                  992: { slidesPerView: 4 },
+                  576: { slidesPerView: 2 },
+                  768: { slidesPerView: 2 },
+                  992: { slidesPerView: 3  },
                   1200: { slidesPerView: 5 },
                 }}
                 className="portfolio-swiper"

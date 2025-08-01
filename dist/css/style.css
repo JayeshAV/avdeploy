@@ -94,8 +94,8 @@
 }
 .custom-navbar .nav-links ul li a.active,
 .custom-navbar .nav-links ul li span.active {
-  color: #ffc107;
-  border-bottom: 2px solid #ffc107;
+  color: #e0a63b;
+  border-bottom: 2px solid #e0a63b;
 }
 .custom-navbar .nav-links ul li a:hover,
 .custom-navbar .nav-links ul li span:hover {
@@ -125,7 +125,7 @@
   font-size: 14px;
 }
 .custom-navbar .nav-links ul li.dropdown .dropdown-content a:hover {
-  color: #ffc107;
+  color: #e0a63b;
 }
 .custom-navbar .nav-links ul li.dropdown:hover .dropdown-content {
   display: -webkit-box;
@@ -138,7 +138,7 @@
   display: flex;
 }
 .custom-navbar .nav-links ul li.cta a {
-  background-color: #ffc107;
+  background-color: #e0a63b;
   color: white;
   padding: 8px 16px;
   border-radius: 30px;
@@ -270,7 +270,7 @@
   color: #f9f9f9;
 }
 .hero-section .hero-left .highlight {
-  color: #ffc107;
+  color: #e0a63b;
   font-weight: bold;
 }
 .hero-section .hero-left p {
@@ -280,7 +280,7 @@
 }
 .hero-section .hero-left .schedule-btn {
   padding: 12px 24px;
-  background-color: #ffc107;
+  background-color: #e0a63b;
   color: white;
   border: none;
   border-radius: 30px;

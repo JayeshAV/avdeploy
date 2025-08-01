@@ -72,19 +72,22 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 90%;
+  height: 33%;
 }
 .why-us-text .why-box h3 {
   font-size: 1.4rem;
   font-weight: 600;
   padding-left: 10px;
+  margin-bottom: 1%;
   color: #FFC107;
+  padding-top: 10px;
 }
 .why-us-text .why-box p {
   font-size: 1rem;
-  line-height: 1.4;
+  line-height: 1.5;
   color: white;
   padding-left: 10px;
+  padding-bottom: 12px;
 }
 
 .why-us-img {
@@ -151,6 +154,7 @@
   }
   .why-us-title p {
     font-size: 1.1rem;
+    padding-bottom: 0px;
   }
 }
 @media (min-width: 1024px) {
@@ -159,6 +163,7 @@
   }
   .why-us-text .why-box p {
     font-size: 1.1rem;
+    padding-bottom: 0px;
   }
   .why-us-img {
     min-height: 400px;
@@ -166,7 +171,7 @@
 }
 @media (min-width: 1280px) {
   .why-us-wrapper {
-    padding-top: 100px;
+    padding-top: 80px;
   }
   .why-us-title h2 {
     font-size: 2.8rem;
@@ -184,6 +189,7 @@
   }
   .why-us-text .why-box p {
     font-size: 1.15rem;
+    padding-bottom: 0px;
   }
   .why-us-img {
     min-height: 450px;

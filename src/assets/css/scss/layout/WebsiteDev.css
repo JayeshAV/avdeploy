@@ -66,9 +66,8 @@
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  width: 100%;
-  max-width: 240px;
-  margin: 0 7px;
+  max-width: 400px;
+  margin: 0 0px;
 }
 .portfolio-container .portfolio-header .swiper-container-wrapper .swiper-wrapper-container .portfolio-swiper .swiper-slide-item .service-tab {
   display: -webkit-box;

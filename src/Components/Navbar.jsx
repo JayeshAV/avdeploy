@@ -8,6 +8,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [companyDropdownOpen, setCompanyDropdownOpen] = useState(false);
+   const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 992);
   const location = useLocation();
   const currentPath = location.pathname;
@@ -99,7 +100,7 @@ const Navbar = () => {
     }
   }}
 >
-  <span className={["/about", "/career"].includes(currentPath) ? "active" : ""}>
+  <span className={["/about", "/career","/faq"].includes(currentPath) ? "active" : ""}>
     Company <i className="fa-solid fa-chevron-down"></i>
   </span>
   <div className="dropdown-content">
@@ -121,18 +122,44 @@ const Navbar = () => {
     >
       Careers
     </Link>
+    <Link
+      to="/faq"
+      onClick={() => {
+        setMobileMenuOpen(false);
+        setCompanyDropdownOpen(false);
+      }}
+    >
+      Faq
+    </Link>
   </div>
 </li>
-
-                <li className="cta gradient-border" id="box">
-                 <CommonButton
-  to="/contact"
-  onClick={() => setMobileMenuOpen(false)}
->
-  SCHEDULE A CALL
-</CommonButton>
-
-                </li>
+ <Link
+      to="/contact"
+      onClick={() => {
+        setMobileMenuOpen(false);
+        setCompanyDropdownOpen(false);
+      }}
+      style={{ textDecoration: 'none', fontSize: '18px' }}
+    >
+      <li
+        style={{
+          listStyle: 'none',
+          padding: '12px 15px',
+          borderRadius: '5px',
+          backgroundColor: isHovered ? '#E0A63B' : 'transparent',
+          color: isHovered ? 'white' : '#2265AB',
+          transition: 'all 0.3s ease',
+          display: 'inline-block',
+          border:"1px solid #E0A63B",
+          cursor: 'pointer',
+          fontWeight:'800'
+        }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        SCHEDULE A CALL
+      </li>
+    </Link>
             </ul>
           </div>
         </div>

@@ -12,7 +12,7 @@ const TopRatedCompany = () => {
   "Agile Transformation",
   "Cloud-Driven Strategy"
 ];
-  
+
  const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -27,7 +27,8 @@ const TopRatedCompany = () => {
   <section
   className="hero-section"
   style={{
-    backgroundImage: `linear-gradient(to right, #383838 0%, rgba(255, 255, 255, 0) 100%), url(${bgimage})`
+    backgroundImage: `linear-gradient(to right, #383838 0%, rgba(255, 255, 255, 0) 100%), url(${bgimage})`,
+    padding:'82px 0px'
   }}
 >
 
@@ -58,18 +59,18 @@ const TopRatedCompany = () => {
           <p>
            We are a future-focused software company delivering intelligent, scalable, and secure solutions that grow with your vision. From concept to launch, we turn ideas into high-performance technology that drives real business impact.
           </p>
-          <button className="schedule-btn">Schedule A Call</button>
+          {/* <button className="schedule-btn">Schedule A Call</button> */}
           <div className="stats">
             <div className="stat-box">
               <h3>5+</h3>
               <p>Year of Excellence</p>
             </div>
              <div className="stat-box">
-              <h3>50+</h3>
+              <h3>30+</h3>
               <p>Served Clients</p>
             </div>
             <div className="stat-box">
-              <h3>200+</h3>
+              <h3>35+</h3>
               <p>Tech Developers</p>
             </div>
             <div className="stat-box">

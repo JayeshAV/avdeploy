@@ -1,15 +1,27 @@
 @charset "UTF-8";
 /* 🌐 Base styles - Mobile First */
 .brands-section {
-  padding: 40px 0;
-  background-color: #f9f9f9;
+  padding: 2rem 1rem;
+  background-color: #F0F4FF;
 }
 
 .container {
   width: 100%;
   max-width: 1400px;
-  padding: 0%;
+  padding: 0 1rem;
   margin: 0 auto;
+}
+
+.brands-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .brands-logo {
@@ -22,60 +34,71 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 200px; /* or whatever fits your layout */
-  height: 60px;
-  padding: 10px;
+  width: 100%;
+  height: 80px;
+  padding: 0.5rem;
   background-color: #fff;
   border-radius: 8px;
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-  overflow: hidden;
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .brands-logo img {
-  width: 100%;
-  height: 80%;
+  width: 70%; /* Fixed width relative to container */
+  height: 30px; /* Fixed height for all images */
   -o-object-fit: contain;
      object-fit: contain;
-  padding: 10px;
+  -o-object-position: center;
+     object-position: center;
+  margin: auto;
 }
 
 .logo-weichert img {
-  scale: 0.9;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .brands-logo:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+  -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* 📱 Tablets - min-width 768px */
-@media (min-width: 768px) {
-  .brands-logo {
-    height: 80px;
-    padding: 10px;
-  }
-  .brands-logo img {
-    max-height: 45px;
+/* 📱 Small Tablets - min-width 480px */
+@media (min-width: 480px) {
+  .brands-container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
-/* 💻 Small Laptops - min-width 1024px */
-@media (min-width: 1024px) {
-  .brands-logo {
-    height: 90px;
+/* 📱 Tablets - min-width 768px */
+@media (min-width: 768px) {
+  .brands-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
   }
   .brands-logo img {
-    max-height: 70px;
+    height: 35px; /* Slightly larger for tablets */
+  }
+}
+/* 💻 Laptops - min-width 1024px */
+@media (min-width: 1024px) {
+  .brands-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .brands-logo img {
+    height: 60px; /* Slightly larger for laptops */
   }
 }
 /* 🖥️ Large Screens - min-width 1280px */
 @media (min-width: 1280px) {
-  .brands-logo {
-    height: 80px;
+  .brands-container {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
   }
   .brands-logo img {
-    max-height: 55px;
+    height: 60px; /* Slightly larger for desktops */
   }
 }/*# sourceMappingURL=CompanyLogos.css.map */

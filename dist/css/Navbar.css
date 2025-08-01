@@ -94,8 +94,8 @@
 }
 .custom-navbar .nav-links ul li a.active,
 .custom-navbar .nav-links ul li span.active {
-  color: #ffc107;
-  border-bottom: 2px solid #ffc107;
+  color:#e0a63b;
+  border-bottom: 2px solid #e0a63b;
 }
 .custom-navbar .nav-links ul li a:hover,
 .custom-navbar .nav-links ul li span:hover {
@@ -125,7 +125,7 @@
   font-size: 14px;
 }
 .custom-navbar .nav-links ul li.dropdown .dropdown-content a:hover {
-  color: #ffc107;
+  color: #e0a63b;
 }
 .custom-navbar .nav-links ul li.dropdown:hover .dropdown-content {
   display: -webkit-box;
@@ -138,14 +138,14 @@
   display: flex;
 }
 .custom-navbar .nav-links ul li.cta a {
-  background-color: #ffc107;
+  background-color: #e0a63b;
   color: white;
   padding: 8px 16px;
   border-radius: 30px;
   font-weight: 600;
 }
 .custom-navbar .nav-links ul li.cta a:hover {
-  background-color: rgb(211, 158.25, 0);
+  background-color: #e0a63b;
 }
 .custom-navbar .nav-links.open {
   position: absolute;

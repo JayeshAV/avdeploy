@@ -56,11 +56,10 @@
           .swiper-slide-item {
            .swiper-slide-item {
   flex: 0 0 auto;
-  width: 100%;
-  max-width: 240px;
-  margin: 0 7px; // 14px total horizontal gap between slides
+  max-width: 400px;
+  margin: 0 0px; // 14px total horizontal gap between slides
 }
-
+  
 
             .service-tab {
               display: flex;

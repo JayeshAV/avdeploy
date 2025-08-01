@@ -12,7 +12,7 @@ const Testimonials = () => {
   const styles = {
     section: {
       marginTop:"80px" ,
-      backgroundColor: '#f8f9fa',
+      backgroundColor: '#F0F4FF',
 fontFamily: 'Montserrat, sans-serif' 
     },
     statsNumber: {
@@ -147,11 +147,11 @@ const testimonials = [
   return (
     <section style={styles.section} className="py-5">
       <div className="container">
-        <div className="text-center mb-5">
+        <div className="text-center">
 
   
  
-          <h2 className='case-heading'>Whats <span style={{color:"#FFC107"}}> Our Valuable Clients</span> Say About Us</h2>
+          <h2 className='case-heading'>Whats <span style={{color:"#e0a63b"}}> Our Valuable Clients</span> Say About Us</h2>
         <p 
            className=" text-center mb-0  sub-titles-text case-subtitle w-100"
           

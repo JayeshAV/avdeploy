@@ -10,7 +10,6 @@ const CommonButton = ({
   to, // 👈 ADD THIS for link support
   ...args
 }) => {
-  // If "to" prop diya hai, use <Link>, else use <button>
   if (to) {
     return (
       <Link

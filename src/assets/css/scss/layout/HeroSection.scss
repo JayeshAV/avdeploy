@@ -3,7 +3,7 @@ $text-dark: #1c1c1c;
 $text-light: #333;
 $box-bg: #f0f4ff;
 $bg-light: #f9f9f9;
-$HighlightColor: #ffc107;
+$HighlightColor: #e0a63b;
 
 
 
@@ -89,13 +89,15 @@ $HighlightColor: #ffc107;
           font-size: 1.4rem;
           color: $text-dark;
            text-align: center;
+           font-weight: 800;
         }
 
         p {
           color: #555;
           font-size: 0.9rem;
            text-align: center;
-           margin: auto
+           margin: auto;
+           font-weight: 800;
            ;
         }
       }

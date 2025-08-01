@@ -313,6 +313,8 @@ const PortFolioSection = () => {
 
   const swiperRef = useRef(null);
 
+
+
   useEffect(() => {
     if (swiperRef.current && swiperRef.current.swiper) {
       // Manually update swiper to bind custom buttons
@@ -322,6 +324,7 @@ const PortFolioSection = () => {
       swiperRef.current.swiper.navigation.update();
     }
   }, []);
+
 
 
   const projects = [
@@ -387,176 +390,215 @@ const PortFolioSection = () => {
   return (
     <>
     <style>{`
-        .swiper-pagination {
-          opacity:0;
-        }
-      `}</style>
+  .swiper-pagination {
+    opacity: 0;
+  }
+`}</style>
 
+<section style={sectionStyle}>
+  <section>
+    <h2 className="case-heading text-center text-white">
+      Case Studies that showcase our expertise.
+    </h2>
+    <p className="case-subtitle text-center mx-auto text-white">
+      Our Projects that reflect our skills, proven methods, and technical excellence.
+    </p>
+  </section>
 
-
-       <section style={sectionStyle} >
-         <section >
-  <h2 className="case-heading text-center text-white">
-    Case Studies that showcase our expertise.
-  </h2>
-  <p className="case-subtitle text-center mx-auto text-white">
-    Our Projects that reflect our skills, proven methods, and technical excellence.
-  </p>
-</section>
-<Container className="position-relative" style={{ position: "relative",paddingBottom:"60px" }}>
- <Swiper
-          ref={swiperRef}
-          modules={[Navigation, Pagination]}
-          spaceBetween={30}
-          slidesPerView={1}
-          loop={true}
-          speed={1500}
-          pagination={{ clickable: true }}
-        >
-    {projects.map((project) => (
-      <SwiperSlide key={project.id}>
-        <div
-          style={{
-            position: "absolute",
-            bottom: "0px",
-            left: "-10px",
-            width: "76%",
-            height: "95%",
-            backgroundColor: "#FFFFFF",
-            borderRadius: "14px",
-            marginLeft: "30px",
-            zIndex: 0,
-          }}
-          className="shadow d-none d-md-block"
-        ></div>
-        
-        <Row
-          className="align-items-center position-relative g-4 p-3 p-md-5 shadow bg-white mx-2 mx-md-0"
-          style={{
-            borderRadius: "14px",
-            zIndex: 1,
-            marginBottom: "30px",
-            minHeight: "540px",
-            width: "auto",
-            marginTop: "0px",
-            marginLeft: "0px",
-          }}
-        >
-          {/* Content Column - First on mobile, left on desktop */}
-          <Col xs={12} md={7} className="order-1 order-md-1">
-            <h5 className="fw-bold" style={{ color: "#E0902C" }}>
-              {project.number}
-            </h5>
-            <h3 className="fw-bold mb-3" style={{ color: "#E0902C" }}>
-              {project.title}
-            </h3>
-            <p className="mb-4">{project.description}</p>
-            <ul className="ps-4 mb-4">
-              {project.features.map((feature, index) => (
-                <li key={index} className="mb-2">
-                  {feature}
-                </li>
-              ))}
-            </ul>
-            
-            <div className="d-flex flex-wrap gap-2">
-              <Link
-                to={project.path}
-                style={{
-                  textDecoration: "none",
-                  background: "white",
-                  padding: "8px 20px",
-                  borderRadius: "25px",
-                  border: "1px solid #ccc",
-                  color: "#444",
-                  fontWeight: 500,
-                }}
-              >
-                View More
-              </Link>
-            </div>
-            
-                  <div className="d-flex justify-content-start mt-4 mt-md-5">
-                    <button className="custom-swiper-prev btn rounded-circle shadow-sm px-3 py-2" style={{ color: "#226AB3" }}>
-                      ❮
-                    </button>
-                    <button className="custom-swiper-next btn rounded-circle shadow-sm px-3 py-2 ms-2" style={{ color: "#226AB3" }}>
-                      ❯
-                    </button>
-                  </div>
-          </Col>
-          
-          {/* Image Column - Second on mobile, right on desktop */}
-          <Col xs={12} md={5} className="order-2 order-md-2 mt-3 mt-md-0">
-  <div
-  className="w-100 h-100 d-flex img-fluid align-items-center justify-content-center custom-padding"
-  style={{ position: "relative", minHeight: "250px" }}
->
-
-
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-100 rounded-3 object-fit-cover responsive-img"
-                style={{ 
-                  height: "auto"
-                }}
-              />
-            </div>
-          </Col>
-         
-        </Row>
-        
-      </SwiperSlide>
-    ))}
-    
-  </Swiper>
+  <Container className="position-relative main-class" style={{ position: "relative", paddingBottom: "60px",margin:"auto" }}>
+    <Swiper
+      ref={swiperRef}
+      modules={[Navigation, Pagination ]}
+      spaceBetween={30}
+      className="ms-4"
+      slidesPerView={1}
+      loop={true}
+      speed={1300}
+      pagination={{ clickable: true }}
+      
+    >
+      {projects.map((project) => (
+        <SwiperSlide key={project.id} style={{
+    justifyContent: 'center',
+    alignItems: 'center',
   
- 
-</Container>
+  }}>
+         <div
+      style={{
+        position: "absolute",
+        bottom: "0px",
+        left: "-17px",
+        width: "70.5%",
+        height: "95%",
+        backgroundColor: "#FFFFFF",
+        borderRadius: "14px",
+        marginLeft: "40px",
+        zIndex: 0,
+      }}
+      className="shadow d-none d-md-block"
+    ></div>
+
+          <Row
+            className="align-items-center position-relative g-3 p-3 shadow bg-white mx-2 mx-md-0"
+            style={{
+              borderRadius: "10px",
+              zIndex: 1,
+              marginBottom: "32px",
+              minHeight: "540px",
+              maxWidth: "70%",
+              width: "auto",
+              marginTop: "0px",
+              marginLeft: "0px",
+            }}
+          >
+            <Col xs={12} md={7} className="order-1 order-md-1 pt-5 " style={{paddingLeft:'15px'}}>
+              <h5 className="fw-bold" style={{ color: "#E0902C" }}>
+                {project.number} ──
+              </h5>
+              <h3 className="fw-bold mb-3" style={{ color: "#E0902C" }}>
+                {project.title}
+              </h3>
+              <p className="mb-4 w-100 case-subtitle p-0" style={{textAlign:"left"}}>{project.description}</p>
+              <ul className="ps-4 mb-4">
+                {project.features.map((feature, index) => (
+                  <li key={index} className="mb-2 case-subtitle p-0 w-100" style={{textAlign:"left",fontSize:'16px'}}>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="d-flex flex-wrap gap-2">
+                <Link
+                  to={project.path}
+                  style={{
+                    textDecoration: "none",
+                    background: "white",
+                    padding: "8px 20px",
+                    borderRadius: "25px",
+                    border: "1px solid #ccc",
+                    color: "#444",
+                    fontWeight: 500,
+                  }}
+                >
+                  View More
+                </Link>
+              </div>
+
+              <div className="d-flex justify-content-start mt-4 mt-md-5 mt-5 pt-5">
+                <button className="custom-swiper-prev btn rounded-circle shadow-sm px-3 py-2" style={{ color: "#226AB3" }}>
+                  ❮
+                </button>
+                <button className="custom-swiper-next btn rounded-circle shadow-sm px-3 py-2 ms-2" style={{ color: "#226AB3" }}>
+                  ❯
+                </button>
+              </div>
+            </Col>
+
+            <Col xs={12} md={5} className="order-1 order-md-2 mt-2 mt-md-0">
+              <div
+                className="w-100 h-100 d-flex img-fluid align-items-center justify-content-center custom-padding"
+                style={{ position: "relative", minHeight: "250px" }}
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-100 rounded-3 object-fit-cover responsive-img"
+                  style={{ height: "auto" }}
+                />
+              </div>
+            </Col>
+          </Row>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </Container>
 </section>
 
 <style jsx>{`
-  @media (max-width: 767.98px) {
-    .swiper-slide {
-      padding: 0 10px;
+  @media (max-width: 991.98px) {
+    .row {
+      max-width: 100% !important;
+      width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
     }
-    
+      @media (max-width: 767.98px) {
+  .col-md-5 > div {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+  }
+}
+
+
+    .swiper-slide {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
     .custom-swiper-prev,
     .custom-swiper-next {
-      padding: 10px 12px !important;
+      padding: 8px 12px !important;
       font-size: 14px;
     }
+
+    .col-md-5 > div {
+      position: static !important;
+      padding: 0 !important;
+    }
   }
-  
+
   @media (max-width: 575.98px) {
     .swiper-slide {
-      padding: 0 5px;
+      padding-left: 5px;
+      padding-right: 5px;
     }
-    
+
     .row {
-      margin-left: 10px !important;
-      margin-right: 10px !important;
-      width: calc(100% - 20px) !important;
+      width: 100% !important;
+      margin: 0 10px !important;
+    }
+
+    .custom-swiper-prev,
+    .custom-swiper-next {
+      padding: 6px 10px !important;
+      font-size: 12px;
     }
   }
-  
-  @media (min-width: 768px) {
+
+  @media (min-width: 992px) {
     .row {
       width: 78% !important;
       margin-left: 40px !important;
     }
-    
+
     .col-md-5 > div {
       position: absolute !important;
-      top: 0% !important;
+      top: -10.5px !important;
       left: 50% !important;
-      padding: 130px !important;
+      padding: 0 !important;
     }
-      
+  }
+
+
+  @media (max-width: 768px) {
+    .row {
+      width: 100% !important;
+      margin-left:0% !important;
+      padding-left:0% !important;
+    }
+      .main-class{
+            padding:0% !important;
+
+      }
+
+    .col-md-5 > div {
+     
     }
   }
 `}</style>
+
 
     </>
   );

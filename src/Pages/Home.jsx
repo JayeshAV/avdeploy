@@ -217,6 +217,24 @@ const Home = () => {
     const [activeIndex, setActiveIndex] = useState(null);
  const [openIndex, setOpenIndex] = useState(null); // 👈 This line fixes the error
 
+   const [hovered, setHovered] = useState(false);
+ 
+ 
+     const spanStyle = {
+     backgroundImage: hovered
+       ? 'none'
+       : `linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${headerbg})`,
+     backgroundColor: hovered ? 'white' : 'transparent',
+     backgroundSize: 'cover',
+     backgroundPosition: 'center',
+     display: 'inline-block',
+     padding: '12px 15px',
+     color: hovered ? 'black' : 'white',
+     borderRadius: '4px',
+     fontWeight: '800',
+     transition: 'all 0.3s ease',
+     cursor: 'pointer',
+   };
   const toggleAccordion = (index) => {
     setOpenIndex(prevIndex => (prevIndex === index ? null : index));
   };
@@ -285,10 +303,17 @@ const Home = () => {
             </p>
           </div>
           <div className="avia-button-wrap">
-            <CommonButton to="/contact" className="cta black-cta">
-              SCHEDULE A CALL
-            </CommonButton>
-          </div>
+  <CommonButton to="/contact" className=" ">
+       <span
+  style={spanStyle}
+  onMouseEnter={() => setHovered(true)}
+  onMouseLeave={() => setHovered(false)}
+>
+  SCHEDULE A CALL
+</span>
+  </CommonButton>
+</div>
+
         </div>
       </div>
     </section>
@@ -305,8 +330,8 @@ const Home = () => {
     <div className="container-fluid bg-gray" style={{marginTop:"80px"}} >
   <div className="container py-5 p-0 " style={{maxWidth:'1400px'}}>
     <div className="row justify-content-center industrial-row-full" >
-      <div className="col-12 col-lg-10 col-xl-12">
-        <div className="text-center mb-5">
+      <div className="col-12 col-lg-10 col-xl-12 m-0 p-0">
+        <div className="text-center " >
           <motion.h2
             className="mb-2 ts-0 text-center case-heading "
             variants={staggerItem}
@@ -314,9 +339,9 @@ const Home = () => {
           >
             Industries We Specialize In
           </motion.h2>
-          <motion.p className="text-center mt-2  case-subtitle mx-auto"  variants={staggerItem}>
+          <motion.p className="text-center   case-subtitle mx-auto m-0" style={{paddingBottom:"30px"}}  variants={staggerItem}>
             For over 5 years, we have worked closely with
-            50+ clients all over the world across diverse fields.
+            30+ clients all over the world across diverse fields.
             Thus, we understand your industry's challenges and audience expectations,
             enabling us to quickly identify your needs and develop tailored solutions.
           </motion.p>
@@ -437,9 +462,15 @@ const Home = () => {
           ))}
         </div>
 
-        <Link to="/faq" className="btn view-all-faq">
-          View All FAQs
-        </Link>
+        {/* <Link to="/faq" className="btn view-all-faq">
+         
+        </Link> */}
+
+            <div className="avia-button-wrap pb-5">
+      <CommonButton to="/faq" className="cta " style={{textDecoration:"none",fontWeight:'800'}}>
+       View All FAQs
+      </CommonButton>
+    </div>
       </div>
     </section>
 

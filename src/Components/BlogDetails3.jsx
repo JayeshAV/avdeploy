@@ -137,7 +137,7 @@ const BlogDetails3 = () => {
             <div class="conclusion-box p-4 mt-4 rounded-3" style={{backgroundColor: '#fff8f0', borderTop: '3px solid #e0a63b'}}>
                 <h4 style={{color:"#e0a63b"}}>Conclusion</h4>
                 <p>As technology continues to evolve, so too must the way we build and interact with websites. By staying ahead of these top web development trends for 2025, businesses can provide better user experiences, optimize performance, and create more innovative digital solutions.</p>
-                <button class="btn mt-3 px-4 py-2"  style={{backgroundColor:"#e0a63b",color:"white",border:"none",borderRadius:"30px"}}>
+                <button class="mt-3 px-4 py-2 cta"  style={{backgroundColor:"#e0a63b",color:"white",border:"none"}}>
                     Learn How to Implement These Trends
                 </button>
             </div>

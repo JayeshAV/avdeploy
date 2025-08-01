@@ -221,7 +221,7 @@ const BlogDetails1 = () => {
                                     <p class="mb-md-0">Our AI-powered IT solutions can future-proof your business with quantum-resistant security, edge computing, and next-gen automation.</p>
                                 </div>
                                 <div class="col-md-4 text-md-end">
-                                    <button class="btn btn-light btn-lg px-4 py-3 rounded-pill pulse-animation">
+                                    <button class="cta  px-4 py-3 ">
                                         Schedule Free Tech Audit <i class="bi bi-arrow-right ms-2"></i>
                                     </button>
                                 </div>

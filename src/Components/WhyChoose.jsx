@@ -42,8 +42,8 @@ const services = [
 const WhyChoose = () => {
   return (
     <div className="our-services">
-      <div className="our-services-title">
-        <h2>Why Choose <span style={{color:'#FFC107'}}>Avatara</span> ?</h2>
+      <div className="our-services-title m-0 p-0">
+        <h2>Why Choose <span style={{color:'#E0A63B'}}>Avatara</span> ?</h2>
         <p className=" case-subtitle w-100">At Avatara, we don't just build software — we build trust, innovation, and long-term value. Here's what sets us apart and why businesses choose us with confidence.</p>
       </div>
       <div className="row">

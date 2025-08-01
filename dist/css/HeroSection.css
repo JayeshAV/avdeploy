@@ -30,7 +30,7 @@
   color: #f9f9f9;
 }
 .hero-section .hero-left .highlight {
-  color: #ffc107;
+  color: #e0a63b;
   font-weight: bold;
 }
 .hero-section .hero-left p {
@@ -40,7 +40,7 @@
 }
 .hero-section .hero-left .schedule-btn {
   padding: 12px 24px;
-  background-color: #ffc107;
+  background-color: #e0a63b;
   color: white;
   border: none;
   border-radius: 30px;

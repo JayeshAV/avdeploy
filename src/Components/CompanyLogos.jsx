@@ -7,6 +7,8 @@ import oppo from "../assets/images/oppo.png"
 import lnt from "../assets/images/lnt.png"
 import weighrot from  "../assets/images/weil.png"
 import tata from  "../assets/images/tata.png"
+import trishita from  "../assets/images/trishita.jpeg"
+
 
 
 
@@ -28,21 +30,9 @@ const brandLogos = [
     img: tata,
     alt: "TATA",
   },
-    {
-    img: oppo,
-    alt: "oppo",
-  },
   {
-    img: lnt,
-    alt: "L&T",
-  },
-  {
-    img: weighrot,
-    alt: "weichert",
-  },
-  {
-    img: tata,
-    alt: "TATA",
+    img: trishita,
+    alt: "trishita",
   },
     {
     img: oppo,
@@ -52,160 +42,15 @@ const brandLogos = [
     img: lnt,
     alt: "L&T",
   },
-  {
+   {
     img: weighrot,
     alt: "weichert",
   },
   {
     img: tata,
     alt: "TATA",
-  },
-    {
-    img: oppo,
-    alt: "oppo",
-  },
-  {
-    img: lnt,
-    alt: "L&T",
-  },
-  {
-    img: weighrot,
-    alt: "weichert",
-  },
-  {
-    img: tata,
-    alt: "TATA",
-  },
-  {
-    img: oppo,
-    alt: "oppo",
-  },
-  {
-    img: lnt,
-    alt: "L&T",
-  },
-  {
-    img: weighrot,
-    alt: "weichert",
-  },
-  {
-    img: tata,
-    alt: "TATA",
-  },
-    {
-    img: oppo,
-    alt: "oppo",
-  },
-  {
-    img: lnt,
-    alt: "L&T",
-  },
-  {
-    img: weighrot,
-    alt: "weichert",
-  },
-  {
-    img: tata,
-    alt: "TATA",
-  },
-    {
-    img: oppo,
-    alt: "oppo",
-  },
-  {
-    img: lnt,
-    alt: "L&T",
-  },
-  {
-    img: weighrot,
-    alt: "weichert",
-  },
-  {
-    img: tata,
-    alt: "TATA",
-  },
-    {
-    img: oppo,
-    alt: "oppo",
-  },
-  {
-    img: lnt,
-    alt: "L&T",
-  },
-  {
-    img: weighrot,
-    alt: "weichert",
-  },
-  {
-    img: tata,
-    alt: "TATA",
-  },
-  {
-    img: oppo,
-    alt: "oppo",
-  },
-  {
-    img: lnt,
-    alt: "L&T",
-  },
-  {
-    img: weighrot,
-    alt: "weichert",
-  },
-  {
-    img: tata,
-    alt: "TATA",
-  },
-    {
-    img: oppo,
-    alt: "oppo",
-  },
-  {
-    img: lnt,
-    alt: "L&T",
-  },
-  {
-    img: weighrot,
-    alt: "weichert",
-  },
-  {
-    img: tata,
-    alt: "TATA",
-  },
-    {
-    img: oppo,
-    alt: "oppo",
-  },
-  {
-    img: lnt,
-    alt: "L&T",
-  },
-  {
-    img: weighrot,
-    alt: "weichert",
-  },
-  {
-    img: tata,
-    alt: "TATA",
-  },
-    {
-    img: oppo,
-    alt: "oppo",
-  },
-  {
-    img: lnt,
-    alt: "L&T",
-  },
-  {
-    img: weighrot,
-    alt: "weichert",
-  },
-  {
-    img: tata,
-    alt: "TATA",
-  },
-
-];
+  }
+]
 
 const CompanyLogos = () => {
   return (

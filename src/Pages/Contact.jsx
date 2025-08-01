@@ -62,20 +62,46 @@ const Contact = () => {
     }
   });
 
+
+   const fadeUp = {
+            hidden: { opacity: 0, y: 40 },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+          };  
+          
   return (
     <>
-         <section
-            className="section-hero"
-          >
-            <div className="hero-container">
-              <div className="hero-content">
-                <h2>Contact Us</h2>
-                <p>
-                 Get answer to your questions about our sales, services, and support.
-                </p>
-              </div>
-            </div>
-          </section>
+      
+         
+                      <motion.section
+                                className="section-hero"
+                                style={sectionStyle}
+                                variants={fadeUp}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                              >
+                                <div className="container" style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 20px' }}>
+                                  <div className="hero-content text-center text-white">
+                                    <motion.h2 
+                                      className="display-4 fw-bold mb-3"
+                                      initial={{ opacity: 0, y: 20 }}
+                                      animate={{ opacity: 1, y: 0 }}
+                                      transition={{ delay: 0.2 }}
+                                    >
+                                   Contact Us
+                                    </motion.h2>
+                                    <motion.p
+                                      className="fs-5 mx-auto"
+                                      style={{ maxWidth: '600px' }}
+                                      initial={{ opacity: 0, y: 20 }}
+                                      animate={{ opacity: 1, y: 0 }}
+                                      transition={{ delay: 0.4 }}
+                                    >
+                                    Get answer to your questions about our sales, services, and support.
+                                    </motion.p>
+                                  </div>
+                                </div>
+                              </motion.section>
           
 
       <section className=' container m-0 p-0 mx-auto bg-transparent' style={{ overflowX: 'hidden' }}>
@@ -86,8 +112,8 @@ const Contact = () => {
         }}>
           <Row className="mb-5 text-center">
             <Col>
-              <h1 style={{ fontSize: 'clamp(28px, 5vw, 35px)', fontWeight: '500', color: 'black' }}>Get in Touch</h1>
-              <p style={{ fontSize: 'clamp(1rem, 3vw, 1.2rem)', color: '#666' }}>We'd love to hear about your project!</p>
+              <h1 className='case-heading'>Get in Touch</h1>
+              <p className='case-subtitle mx-auto'>We'd love to hear about your project!</p>
             </Col>
           </Row>
 
@@ -278,13 +304,13 @@ const Contact = () => {
                     </div>
                   ) : <div style={{ height: '20px', marginBottom: '20px' }}></div>}
 
-                  <Button 
+                  <button 
                     type="submit"
-                    className='yellow-cta d-block mx-auto'
+                    className='cta d-block mx-auto'
                     disabled={formik.isSubmitting}
                   >
                     {formik.isSubmitting ? 'Submitting...' : 'Submit Message'}
-                  </Button>
+                  </button>
                 </form>
               </Card>
             </Col>

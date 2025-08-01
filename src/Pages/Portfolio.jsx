@@ -11,6 +11,10 @@ import Testimonials from '../Components/Testimonials';
 import BlogSlider from '../Components/Blogslider';
 import TechSection from '../Components/TechSection';
 
+  const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};  
 
 const Portfolio = () => {
   const sectionStyle = {
@@ -20,10 +24,7 @@ const Portfolio = () => {
     backgroundRepeat: 'no-repeat',
   };
 
-  const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-};
+
 
   const projects = [
     {
@@ -56,23 +57,50 @@ const Portfolio = () => {
     }
   ];
 
+      const fadeUp = {
+      hidden: { opacity: 0, y: 40 },
+      visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    };
 
   return (
     <>
 
-
-        <section
+    
+   
+    
+    <motion.section
             className="section-hero"
+            style={sectionStyle}
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
           >
-            <div className="hero-container">
-              <div className="hero-content">
-                <h2>Our Latest Projects</h2>
-                <p>
+            <div className="container" style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 20px' }}>
+              <div className="hero-content text-center text-white">
+                <motion.h2 
+                  className="display-4 fw-bold mb-3"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 }}
+                >
+               Our Latest Projects
+                </motion.h2>
+                <motion.p
+                  className="fs-5 mx-auto"
+                  style={{ maxWidth: '600px' }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 }}
+                >
                   At Avatara Technobiz, we take pride in delivering cutting-edge projects tailored to the unique needs of small and medium businesses. From digital storefronts to service-based platforms, our expertise spans a wide range of industries. Explore our latest projects and see how we bring technology-driven success to businesses of all kinds.
-                </p>
+                </motion.p>
               </div>
             </div>
-          </section>
+          </motion.section>
+
+
+    
 
 
       {/* <section className="section-hero" style={sectionStyle}>
